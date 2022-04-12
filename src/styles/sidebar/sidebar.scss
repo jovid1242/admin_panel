@@ -1,0 +1,59 @@
+$textColor: #3d4d72;
+
+.sidebar {
+  &__wrapper {
+    width: 206px;
+    width: 202px;
+    position: fixed;
+    z-index: 1028;
+    border-radius: 6px 6px 0 0;
+    transition: 0.6s;
+    height: 100vh;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    top: 106px;
+    background-color: #060818;
+
+    .menu {
+      height: calc(100vh - 107px) !important;
+      margin-right: 0;
+      padding: 0 10px;
+      border-right: 1px solid #0e1726;
+
+      .menu__categories {
+        margin-top: 20px;
+        .menu_categories__list {
+          display: flex;
+          justify-content: space-between;
+          cursor: pointer;
+          font-size: 13px;
+          color: #506690;
+          padding: 11px 14px;
+          transition: 0.6s;
+          margin-bottom: 4px;
+          font-weight: 600;
+          letter-spacing: 1px;
+
+          &:hover {
+            background: #3b3f5c;
+            color: #e0e6ed;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%),
+              0 1px 2px 0 rgb(0 0 0 / 6%);
+            border-radius: 6px;
+          }
+          &:hover > a span {
+            color: #fff;
+          }
+
+          a {
+            span {
+              color: $textColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}
