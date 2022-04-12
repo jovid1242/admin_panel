@@ -2,10 +2,10 @@ import React from "react";
 
 import "../../../styles/submenu/submenu.scss";
 
-export default function SubMenu({ className }) {
+export default function SubMenu({ visibility }) {
   return (
     <>
-      <div className={className ? "submenu d-none" : "submenu"}>
+      <div className={visibility ? "submenu d-none" : "submenu"}>
         <ul className="submenu__list ">
           <li>
             <a href="#">* Sale</a>
