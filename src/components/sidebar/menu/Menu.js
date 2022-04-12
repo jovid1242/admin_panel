@@ -69,7 +69,7 @@ export default function Menu() {
                 </div>
               </a>
               {el.submenu ? (
-                <SubMenu className={activeTab === el.title ? true : false} />
+                <SubMenu visibility={activeTab === el.title ? true : false} />
               ) : null}
             </li>
           );
