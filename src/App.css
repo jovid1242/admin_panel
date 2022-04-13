@@ -17,7 +17,12 @@ a {
 }
 
 .d-none {
-    display: none;
+    /* display: none; */
+    visibility: hidden !important;
+    transition: 0.3s ease-in-out !important;
+    animation: hideBlock 0.3s linear;
+    opacity: 0 !important;
+    height: 0 !important;
 }
 
 ::-webkit-scrollbar-track {
