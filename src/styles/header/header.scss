@@ -103,11 +103,19 @@ header {
       margin-left: 20px;
       position: relative;
       list-style: none;
+
+      svg {
+        width: 22px;
+        height: 22px;
+        color: #888ea8;
+      }
     }
 
     .userAva {
       margin-right: 27px;
       margin-left: 20px;
+      img {
+        border-radius: 4px;}
     }
   }
 }
@@ -138,6 +146,7 @@ header {
         padding: 6px 20px 0 31px;
         margin-left: 0;
         outline: none;
+
         svg {
           width: 20px;
           height: 20px;
@@ -187,6 +196,15 @@ header {
     vertical-align: middle;
     margin-left: 10px;
     justify-content: flex-end;
+
+    svg {
+      width: 13px;
+      height: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
 

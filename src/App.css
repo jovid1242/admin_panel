@@ -1,35 +1,38 @@
 * {
-     margin: 0;
-     padding: 0;
-
+    margin: 0;
+    padding: 0;
 }
 
 ul {
-     margin: 0;
-     padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 li {
-     list-style: none;
+    list-style: none;
 }
 
 a {
-     text-decoration: none;
+    text-decoration: none;
+}
+
+.d-none {
+    display: none;
 }
 
 ::-webkit-scrollbar-track {
-     background-color: #0e1726;
-     /*Цвет скролла*/
+    background-color: #0e1726;
+    /*Цвет скролла*/
 }
 
 ::-webkit-scrollbar-thumb {
-     border-radius: 5px;
-     /*Закругление ползунка*/
-     background-color: #3b3f5c;
-     /*Цвет ползунка*/
+    border-radius: 5px;
+    /*Закругление ползунка*/
+    background-color: #3b3f5c;
+    /*Цвет ползунка*/
 }
 
 ::-webkit-scrollbar {
-     width: 6px;
-     /*Толщина скролла*/
+    width: 6px;
+    /*Толщина скролла*/
 }

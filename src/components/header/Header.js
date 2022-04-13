@@ -2,6 +2,11 @@ import React from "react";
 import "../../styles/header/header.scss";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BiSearch } from "react-icons/bi";
+import { FaChevronDown } from "react-icons/fa";
+import { MdLanguage } from "react-icons/md";
+import { FiMail } from "react-icons/fi";
+import { RiNotification2Line } from "react-icons/ri";
+// import { FiMail } from "react-icons/fi";
 
 export default function Header() {
     return (
@@ -41,40 +46,25 @@ export default function Header() {
                 <ul className="headerRight">
                     <li className="icons">
                         <a href="#">
-                            <img
-                                width={22}
-                                height={22}
-                                src="/img/lang.png"
-                                alt="language"
-                            ></img>
+                            <MdLanguage />
                         </a>
                     </li>
                     <li className="icons">
                         <a href="#">
-                            <img
-                                width={22}
-                                height={22}
-                                src="/img/mail.png"
-                                alt="mail icon"
-                            ></img>
+                            <FiMail />
                         </a>
                     </li>
                     <li className="icons">
                         <a href="#">
-                            <img
-                                width={22}
-                                height={22}
-                                src="/img/not.png"
-                                alt="notification"
-                            ></img>
+                            <RiNotification2Line />
                         </a>
                     </li>
                     <li className="userAva">
                         <a href="#">
                             <img
-                                width={22}
-                                height={22}
-                                src="/img/ava.png"
+                                width={28}
+                                height={28}
+                                src="/img/profile-16.jpeg"
                                 alt="user avatar"
                             ></img>
                         </a>
@@ -93,15 +83,9 @@ export default function Header() {
                     </div>
                     <div className="bottomRight">
                         <div className="dropdownSelect">
-                            <span className="select">Selttings</span>
+                            <span className="select">Settings</span>
                             <div className="dropdownSelectButton">
-                                <img
-                                    width={13}
-                                    height={13}
-                                    src="/img/select.png"
-                                    className="selectIcon"
-                                    alt="icon"
-                                ></img>
+                                <FaChevronDown />
                             </div>
                         </div>
                         <div className="dropdownList">
