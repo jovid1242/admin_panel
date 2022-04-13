@@ -4,10 +4,19 @@
   margin: 0 auto;
 }
 
-header {
+.fixedTop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.headerTop {
   display: flex;
   justify-content: space-between;
-  padding: 6px 0;
+  padding: 4px 0;
+  background-color: #060818;
+  border-bottom: 1px solid #060818;
 
   .headerLeft {
     display: flex;
@@ -131,6 +140,7 @@ header {
       0 3px 5px -1px rgb(0 0 0 / 20%);
     background: rgb(26, 28, 45);
     // padding: 9px 0px;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: 50px;
