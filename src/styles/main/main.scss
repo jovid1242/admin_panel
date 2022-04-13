@@ -1,0 +1,19 @@
+.main {
+    width: 100%;
+    background-color: #060818;
+
+    .main_content {
+        position: relative;
+        width: 50%;
+        flex-grow: 8;
+        margin-top: 55px;
+        margin-bottom: 0;
+        margin-left: 212px;
+        transition: 0.6s;
+
+        .layout {
+            padding: 0 20px 0 18px !important;
+            min-height: calc(100vh - 55px) !important;
+        }
+    }
+}
