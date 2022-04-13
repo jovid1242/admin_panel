@@ -84,8 +84,12 @@ $textColor: #3d4d72;
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
+                            .list_name {
+                                display: flex;
+                            }
 
                             .list_icon {
+                                margin-right: 15px;
                                 svg {
                                     width: 20px;
                                     height: 20px;
