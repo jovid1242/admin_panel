@@ -110,7 +110,7 @@ export default function Menu() {
     ];
 
     const toggleMenuBtn = (name) => {
-        if (activeTab.visibility) {
+        if (activeTab.name === name && activeTab.visibility) {
             setActiveTab({ visibility: false, name: name });
         } else {
             setActiveTab({ visibility: true, name: name });
