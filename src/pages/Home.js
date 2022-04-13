@@ -6,9 +6,10 @@ import Main from "../components/main/Main";
 export default function Home() {
     return (
         <>
-            <Header />
+            <h1>Home Page</h1>
+            {/* <Header />
             <Sidebar />
-            <Main />
+            <Main /> */}
         </>
     );
 }

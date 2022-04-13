@@ -17,6 +17,7 @@
   padding: 4px 0;
   background-color: #060818;
   border-bottom: 1px solid #060818;
+  z-index: 3;
 
   .headerLeft {
     display: flex;
@@ -134,6 +135,7 @@
   top: 53px;
   width: 100%;
   display: flex;
+  z-index: 3;
 
   .bottomHeader {
     box-shadow: 0 6px 10px 0 rgb(0 0 0 / 54%), 0 1px 18px 0 rgb(0 0 0 / 12%),
