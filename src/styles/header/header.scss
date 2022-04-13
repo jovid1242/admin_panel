@@ -59,12 +59,14 @@ header {
         display: flex;
         align-items: center;
 
-        img {
+        svg {
           margin: 0 9.6px;
           cursor: pointer;
           top: 9px;
           overflow: hidden;
           vertical-align: middle;
+          width: 18px;
+          height: 18px;
         }
 
         .searchForm {
@@ -101,11 +103,19 @@ header {
       margin-left: 20px;
       position: relative;
       list-style: none;
+
+      svg {
+        width: 22px;
+        height: 22px;
+        color: #888ea8;
+      }
     }
 
     .userAva {
       margin-right: 27px;
       margin-left: 20px;
+      img {
+        border-radius: 4px;}
     }
   }
 }
@@ -133,9 +143,15 @@ header {
       position: relative;
 
       .bottomBtn {
-        padding: 6px 25px 0 31px;
+        padding: 6px 20px 0 31px;
         margin-left: 0;
         outline: none;
+
+        svg {
+          width: 20px;
+          height: 20px;
+          color: #e0e6ed;
+        }
       }
 
       .bottomTitle {
@@ -180,6 +196,15 @@ header {
     vertical-align: middle;
     margin-left: 10px;
     justify-content: flex-end;
+
+    svg {
+      width: 13px;
+      height: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
 
