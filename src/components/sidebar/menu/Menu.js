@@ -70,8 +70,12 @@ export default function Menu() {
                         >
                             <a href={el.href} className="m_list">
                                 <div className="list">
-                                    <div className="list_icon">{el.icon}</div>
-                                    <span>{el.title}</span>
+                                    <div className="list_name">
+                                        <div className="list_icon">
+                                            {el.icon}
+                                        </div>
+                                        <span>{el.title}</span>
+                                    </div>
                                     {el.submenu ? (
                                         <div
                                             className="list_vicon"
