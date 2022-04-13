@@ -3,55 +3,117 @@ import SubMenu from "../submenu/SubMenu";
 import { BiHomeAlt } from "react-icons/bi";
 import { RiApps2Line } from "react-icons/ri";
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
-import { BsFillChatDotsFill } from "react-icons/bs";
-import { SiRevealdotjs, SiNuxtdotjs } from "react-icons/si";
+import { CgComponents } from "react-icons/cg";
+import { SiInstructables, SiNuxtdotjs } from "react-icons/si";
+import { FaElementor, FaWpforms } from "react-icons/fa";
+import { MdFontDownload, MdOutlineWidgets } from "react-icons/md";
 
 export default function Menu() {
-    const [activeTab, setActiveTab] = useState("");
+    const [activeTab, setActiveTab] = useState({
+        visibility: false,
+        name: null
+    });
 
     const link = [
         {
             href: "#",
             title: "Dashboard",
             icon: <BiHomeAlt />,
+            active: true,
             submenu: [
                 {
                     href: "#",
-                    title: "sale"
+                    title: "Sales"
                 },
                 {
                     href: "#",
-                    title: "sale"
+                    title: "Analytics"
                 }
             ]
         },
         {
             href: "#",
             title: "Apps",
-            icon: <RiApps2Line />
+            icon: <RiApps2Line />,
+            submenu: [
+                {
+                    href: "#",
+                    title: "Chat"
+                },
+                {
+                    href: "#",
+                    title: "Todo List"
+                },
+                {
+                    href: "#",
+                    title: "Contacts"
+                },
+                {
+                    href: "#",
+                    title: "Invoice"
+                }
+            ]
         },
         {
             href: "#",
-            title: "sale3",
-            icon: <BsFillChatDotsFill />
+            title: "Components",
+            icon: <CgComponents />,
+            submenu: [
+                {
+                    href: "#",
+                    title: "Tabs"
+                },
+                {
+                    href: "#",
+                    title: "Modals"
+                },
+                {
+                    href: "#",
+                    title: "Cards"
+                },
+                {
+                    href: "#",
+                    title: "Carousel"
+                }
+            ]
         },
         {
             href: "#",
-            title: "sale4",
-            icon: <SiRevealdotjs />
+            title: "Elements",
+            icon: <FaElementor />
         },
         {
             href: "#",
-            title: "sale",
-            icon: <SiNuxtdotjs />
+            title: "Fonts Icons",
+            icon: <MdFontDownload />
+        },
+        {
+            href: "#",
+            title: "Widgets",
+            icon: <MdOutlineWidgets />
+        },
+        {
+            href: "#",
+            title: "Tables",
+            icon: <SiInstructables />
+        },
+        {
+            href: "#",
+            title: "DataTables",
+            icon: <SiInstructables />
+        },
+        {
+            href: "#",
+            title: "Forms",
+            icon: <FaWpforms />
         }
     ];
 
-    const handleMenuBtn = (title) => {
-        if (activeTab === "") {
-            setActiveTab(title);
+    const toggleMenuBtn = (name) => {
+        if (activeTab.visibility) {
+            setActiveTab({ visibility: false, name: name });
         } else {
-            setActiveTab("");
+            setActiveTab({ visibility: true, name: name });
         }
     };
 
@@ -62,7 +124,7 @@ export default function Menu() {
                     return (
                         <li
                             className={
-                                el.submenu
+                                el.active
                                     ? "menu_categories__list activeTabMenu"
                                     : "menu_categories__list"
                             }
@@ -80,11 +142,15 @@ export default function Menu() {
                                         <div
                                             className="list_vicon"
                                             onClick={() =>
-                                                handleMenuBtn(el.title)
+                                                toggleMenuBtn(el.title)
                                             }
                                         >
-                                            {activeTab !== "" ? (
-                                                <IoMdArrowDropdown />
+                                            {activeTab.name === el.title ? (
+                                                activeTab.visibility ? (
+                                                    <IoMdArrowDropdown />
+                                                ) : (
+                                                    <IoMdArrowDropup />
+                                                )
                                             ) : (
                                                 <IoMdArrowDropup />
                                             )}
@@ -94,12 +160,13 @@ export default function Menu() {
                                     )}
                                 </div>
                             </a>
-                            {el.submenu ? (
-                                <SubMenu
-                                    visibility={
-                                        activeTab === el.title ? true : false
-                                    }
-                                />
+                            {activeTab.name === el.title ? (
+                                el.submenu ? (
+                                    <SubMenu
+                                        visibility={activeTab.visibility}
+                                        link={el.submenu}
+                                    />
+                                ) : null
                             ) : null}
                         </li>
                     );
