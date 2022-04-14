@@ -4,7 +4,6 @@ p {
 
 .row {
     display: flex;
-    justify-content: space-between;
     width: 100%;
     margin-top: 20px;
     color: #e0e6ed;
@@ -48,7 +47,7 @@ p {
         }
     }
 }
-.renevueDropdown:hover .dropdownMenu{
+.renevueDropdown:hover .dropdownMenu {
     opacity: 1;
     visibility: visible;
 }
@@ -70,7 +69,8 @@ p {
     left: auto !important;
     border-radius: 8px;
     background: #1b2e4b;
-    box-shadow: 0 6px 10px 0 rgb(0 0 0 / 14%), 0 1px 18px 0 rgb(0 0 0 / 12%), 0 3px 5px -1px rgb(0 0 0 / 20%);
+    box-shadow: 0 6px 10px 0 rgb(0 0 0 / 14%), 0 1px 18px 0 rgb(0 0 0 / 12%),
+        0 3px 5px -1px rgb(0 0 0 / 20%);
     .dropdownItem {
         padding: 6px 17px;
         clear: both;
