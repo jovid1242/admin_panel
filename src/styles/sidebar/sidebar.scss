@@ -24,8 +24,7 @@ $textColor: #3d4d72;
 
 .sidebar {
     &__wrapper {
-        width: 206px;
-        width: 202px;
+        width: 212px;
         position: fixed;
         z-index: 3;
         transition: 0.6s;
@@ -74,7 +73,7 @@ $textColor: #3d4d72;
                         font-size: 13px;
                         color: #506690;
                         padding: 5px 14px;
-                        transition: 0.6s;
+                        transition: all 0.3s ease-in-out;
                         margin-bottom: 4px;
                         font-weight: 600;
                         letter-spacing: 1px;
