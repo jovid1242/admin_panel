@@ -22,11 +22,11 @@ export default function Menu() {
             active: true,
             submenu: [
                 {
-                    href: "#",
+                    href: "/dashboard",
                     title: "Sales"
                 },
                 {
-                    href: "#",
+                    href: "/analytics",
                     title: "Analytics"
                 }
             ]

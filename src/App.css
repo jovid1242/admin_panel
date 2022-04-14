@@ -41,3 +41,22 @@ a {
     width: 6px;
     /*Толщина скролла*/
 }
+
+/* flex box card rov col-md */
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.adm-col_12 {
+    width: 100%;
+}
+
+.adm-col_6 {
+    width: 50%;
+}
