@@ -1,0 +1,21 @@
+@import '../../variables.scss';
+
+.card {
+    padding: 20px;
+    border-radius: 6px;
+    background: $palette-primary;
+    width: 60%;
+    height: auto;
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        font-size: 19px;
+        font-weight: 600;
+        color: $palette-headlines;
+    }
+    .card-body {
+        position: relative;
+        
+    }
+}
