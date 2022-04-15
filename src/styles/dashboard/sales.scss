@@ -1,8 +1,8 @@
 .row {
-    display: flex;
-    width: 100%;
-    margin-top: 20px;
-    color: #e0e6ed;
+    // display: flex;
+    // width: 100%;
+    // margin-top: 20px;
+    // color: #e0e6ed;
 
     .renevue {
         position: relative;
@@ -91,8 +91,6 @@
 }
 
 .firstdBlocks {
-    width: 30%;
-
     .dailySales {
         background: #0e1726;
         border-radius: 8px;
@@ -135,6 +133,9 @@
                     vertical-align: middle;
                 }
             }
+        }
+        .columnChart {
+            min-height: 175px;
         }
     }
 }
@@ -183,7 +184,6 @@
 }
 
 .secondBlocks {
-    width: 30%;
     padding-bottom: 25px;
 
     .summary {
@@ -280,8 +280,6 @@
 }
 
 .thirdBlocks {
-    width: 30%;
-
     .totalOrders {
         position: relative;
         background: #0e1726;

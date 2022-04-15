@@ -55,8 +55,8 @@ function PaiChart() {
                 options={state.options}
                 series={state.series}
                 type="donut"
-                height={380}
-                width={380}
+                height={280}
+                width={280}
             />
         </div>
     );
