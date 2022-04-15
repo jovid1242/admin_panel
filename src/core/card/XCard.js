@@ -1,7 +1,8 @@
 import { React } from 'react'
-import '../../styles/core/card/xcard.scss'
+import 'styles/core/card/xcard.scss'
 
-import BarChart from '../../components/BarChart'
+import BarChart from 'components/BarChart'
+import XDropdownMenu from 'core/dropdown/XDropdownMenu'
 
 export default function XCard() {
     return (
@@ -11,17 +12,7 @@ export default function XCard() {
                     <h5>Renevue</h5>
                 </div>
                 <div className="card-actions">
-                    <p>123</p>
-                    {/* <div className="renevueDropdown">
-                        <a href="#">
-                            <HiDotsHorizontal />
-                        </a>
-                        <div className="dropdownMenu">
-                            <a className="dropdownItem">Weekly</a>
-                            <a className="dropdownItem">Monthly</a>
-                            <a className="dropdownItem">Yearly</a>
-                        </div>
-                    </div> */}
+                    <XDropdownMenu items={['Delete', 'Update']} />
                 </div>
             </div>
             <div className="card-body">
