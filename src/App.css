@@ -57,7 +57,10 @@ a {
     max-width: 100%;
     flex: 0 0 100%;
 }
-
+.adm-col_8 {
+    max-width: 70%;
+    flex: 0 0 70%;
+}
 .adm-col_6 {
     max-width: 50%;
     flex: 0 0 50%;

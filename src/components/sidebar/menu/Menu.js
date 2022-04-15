@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import SubMenu from "../submenu/SubMenu";
+import { Link } from "react-router-dom";
 import { BiHomeAlt } from "react-icons/bi";
 import { RiApps2Line } from "react-icons/ri";
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
@@ -37,7 +38,7 @@ export default function Menu() {
             icon: <RiApps2Line />,
             submenu: [
                 {
-                    href: "#",
+                    href: "/chat",
                     title: "Chat"
                 },
                 {
@@ -130,7 +131,7 @@ export default function Menu() {
                             }
                             key={el.title + i}
                         >
-                            <a href={el.href} className="m_list">
+                            <Link to={el.href} className="m_list">
                                 <div className="list">
                                     <div className="list_name">
                                         <div className="list_icon">
@@ -159,7 +160,7 @@ export default function Menu() {
                                         <div className=""></div>
                                     )}
                                 </div>
-                            </a>
+                            </Link>
                             {activeTab.name === el.title ? (
                                 el.submenu ? (
                                     <SubMenu

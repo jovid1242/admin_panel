@@ -1,7 +1,3 @@
-p {
-    color: red;
-}
-
 .row {
     display: flex;
     width: 100%;
@@ -16,6 +12,10 @@ p {
         background: #0e1726;
         width: 830;
         min-height: 350 !important;
+
+        p {
+            color: red;
+        }
 
         .renevueHeadline {
             display: flex;
@@ -142,12 +142,6 @@ p {
     }
 }
 
-
-
-
-
-
-
 // Icons style
 .viloet {
     background: #5c1ac3;
@@ -165,12 +159,11 @@ p {
 .lgBlue {
     background-color: #4361ee;
     background-image: linear-gradient(to right, #7579ff 0%, #b224ef 100%);
-
 }
 
 .lgSalad {
     background-color: #4361ee;
-    background-image: linear-gradient(to right, #3cba92 0%, #0ba360 100%)
+    background-image: linear-gradient(to right, #3cba92 0%, #0ba360 100%);
 }
 
 .rdOrange {
@@ -191,14 +184,6 @@ p {
 .w80 {
     width: 80%;
 }
-
-
-
-
-
-
-
-
 
 .secondBlocks {
     width: 30%;
@@ -288,7 +273,8 @@ p {
                                 // background-color: #4361ee;
                                 border-radius: 16px;
                                 // background-image: linear-gradient(to right, #7579ff 0%, #b224ef 100%);
-                                box-shadow: 0 2px 4px rgb(0 69 255 / 15%), 0 8px 16px rgb(0 69 255 / 20%);
+                                box-shadow: 0 2px 4px rgb(0 69 255 / 15%),
+                                    0 8px 16px rgb(0 69 255 / 20%);
                             }
                         }
                     }
