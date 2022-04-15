@@ -1,12 +1,13 @@
-import React from "react";
-import "../../styles/header/header.scss";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { BiSearch } from "react-icons/bi";
-import { FaChevronDown } from "react-icons/fa";
-import { MdLanguage } from "react-icons/md";
-import { FiMail } from "react-icons/fi";
-import { RiNotification2Line } from "react-icons/ri";
-// import { FiMail } from "react-icons/fi";
+import React from 'react'
+import '../../styles/header/header.scss'
+import { GiHamburgerMenu } from 'react-icons/gi'
+import { BiSearch } from 'react-icons/bi'
+import { MdLanguage } from 'react-icons/md'
+import { FiMail } from 'react-icons/fi'
+import { RiNotification2Line } from 'react-icons/ri'
+import XSelect from '../../core/select/XSelect'
+
+const selectItems = ['Settings', 'Mail', 'Print', 'Download', 'Share']
 
 export default function Header() {
     return (
@@ -24,7 +25,7 @@ export default function Header() {
                                 />
                             </li>
                             <li className="logoText">
-                                <a href="#" className="logoText">
+                                <a href="/" className="logoText">
                                     Cork
                                 </a>
                             </li>
@@ -46,28 +47,28 @@ export default function Header() {
                     </div>
                     <ul className="headerRight">
                         <li className="icons">
-                            <a href="#">
+                            <a href="/">
                                 <MdLanguage />
                             </a>
                         </li>
                         <li className="icons">
-                            <a href="#">
+                            <a href="/">
                                 <FiMail />
                             </a>
                         </li>
                         <li className="icons">
-                            <a href="#">
+                            <a href="/">
                                 <RiNotification2Line />
                             </a>
                         </li>
                         <li className="userAva">
-                            <a href="#">
+                            <a href="/">
                                 <img
                                     width={28}
                                     height={28}
                                     src="/img/profile-16.jpeg"
                                     alt="user avatar"
-                                ></img>
+                                />
                             </a>
                         </li>
                     </ul>
@@ -77,29 +78,17 @@ export default function Header() {
                 <header className="bottomHeader">
                     <div className="bottomLeft">
                         <div className="bottomBtn">
-                            <a href="#" className="burgerButton">
+                            <a href="/" className="burgerButton">
                                 <GiHamburgerMenu width={20} height={20} />
                             </a>
                         </div>
                         <h3 className="bottomTitle">Dashboard / Sales</h3>
                     </div>
                     <div className="bottomRight">
-                        <div className="dropdownSelect">
-                            <span className="select">Selttings</span>
-                            <div className="dropdownSelectButton">
-                                <FaChevronDown />
-                            </div>
-                        </div>
-                        <div className="dropdownList">
-                            <div className="dropdownItem">Settings</div>
-                            <div className="dropdownItem">Mail</div>
-                            <div className="dropdownItem">Print</div>
-                            <div className="dropdownItem">Download</div>
-                            <div className="dropdownItem">Share</div>
-                        </div>
+                        <XSelect items={selectItems} />
                     </div>
                 </header>
             </div>
         </div>
-    );
+    )
 }
