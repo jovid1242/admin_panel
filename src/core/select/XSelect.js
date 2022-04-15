@@ -20,7 +20,8 @@ function XSelect({ items, defaultItem, onChange }) {
             return (
                 <div
                     onClick={() => setSelectedItem(el)}
-                    className="dropdownItem"
+                    className="option"
+                    key={el}
                 >
                     {el}
                 </div>
@@ -29,15 +30,22 @@ function XSelect({ items, defaultItem, onChange }) {
     }
 
     return (
-        <div>
-            <div className="dropdownSelect" onClick={() => setShowList(true)}>
+        <div className="select">
+            <div
+                className="select-content"
+                onClick={() => setShowList(!showList)}
+            >
                 <p className="selected">{selected}</p>
-                <div className="dropdownSelectButton">
+                <div
+                    className={
+                        'select-button ' + (showList ? 'rotate-180' : '')
+                    }
+                >
                     <FaChevronDown />
                 </div>
             </div>
             <div
-                className={(showList ? 'show' : '') + ' dropdownList'}
+                className={(showList ? 'show' : '') + ' options'}
                 onMouseLeave={() => setShowList(false)}
             >
                 {getItems()}
