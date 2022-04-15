@@ -79,3 +79,7 @@ a {
     color: #bfc9d4;
     font-weight: 700;
 }
+.show{
+    visibility: visible !important;
+    opacity: 1 !important;
+}
