@@ -147,14 +147,14 @@
                 position: relative;
                 margin-left: 5px;
                 width: 100%;
-                height: calc(100% - 125px);
                 background: url("../../../assets/img/chat/fon.jpg");
                 background-repeat: no-repeat;
                 background-size: cover;
-                overflow-y: scroll;
 
                 .chat__main-wrapper {
                     padding: 20px;
+                    height: 250px;
+                    overflow-y: scroll;
                 }
 
                 .bubble {
