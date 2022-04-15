@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "../card/Card";
 import {
     BiSearchAlt,
@@ -10,45 +10,52 @@ import userAva from "../../assets/img/chat/4.jpg";
 import "../../styles/apps/chat/chat.scss";
 
 export default function Chat() {
+    const [textSearch, setTextSearch] = useState("");
+    const [mess, setMess] = useState([
+        {
+            text: "How are you?"
+        }
+    ]);
+    const [text, setText] = useState("");
     const dataUser = [
         {
             id: new Date().getTime(),
-            name: "jovid",
+            name: "Jovid",
             preMess: "How do you like my chat",
             avatar: userAva,
             date: new Date()
         },
         {
             id: new Date().getTime(),
-            name: "jovid",
+            name: "Maria",
             preMess: "How do you like my chat",
             avatar: userAva,
             date: new Date()
         },
         {
             id: new Date().getTime(),
-            name: "jovid",
+            name: "Jhon",
             preMess: "How do you like my chat",
             avatar: userAva,
             date: new Date()
         },
         {
             id: new Date().getTime(),
-            name: "jovid",
+            name: "Toms",
             preMess: "How do you like my chat",
             avatar: userAva,
             date: new Date()
         },
         {
             id: new Date().getTime(),
-            name: "jovid",
+            name: "David",
             preMess: "How do you like my chat",
             avatar: userAva,
             date: new Date()
         },
         {
             id: new Date().getTime(),
-            name: "jovid",
+            name: "Alina",
             preMess: "How do you like my chat",
             avatar: userAva,
             date: new Date()
@@ -68,6 +75,25 @@ export default function Chat() {
             date: new Date()
         }
     ];
+
+    const searchUser = dataUser?.filter((val) => {
+        if (!textSearch === null) {
+            return val;
+        } else if (val.name?.toLowerCase().includes(textSearch.toLowerCase())) {
+            return val;
+        }
+    });
+
+    const handleSearch = (e) => {
+        setTextSearch(e.target.value);
+    };
+
+    const sandMessage = (e) => {
+        e.preventDefault();
+        setMess((prev) => [...prev, { text: text }]);
+        setText("");
+    };
+
     return (
         <div className="chat-section">
             <div className="row">
@@ -78,7 +104,7 @@ export default function Chat() {
                             <div className="chat">
                                 <div className="chat__users">
                                     <div className="chat__header">
-                                        <form action="">
+                                        <form onSubmit={sandMessage}>
                                             <div className="chat__search-group">
                                                 <BiSearchAlt
                                                     width={"20px"}
@@ -86,6 +112,7 @@ export default function Chat() {
                                                 />
                                                 <input
                                                     type="text"
+                                                    onChange={handleSearch}
                                                     placeholder="Search"
                                                 />
                                             </div>
@@ -95,7 +122,7 @@ export default function Chat() {
                                         className="users"
                                         style={{ height: "350px" }}
                                     >
-                                        {dataUser?.map((el, i) => {
+                                        {searchUser?.map((el, i) => {
                                             return (
                                                 <li
                                                     className="user"
@@ -152,26 +179,44 @@ export default function Chat() {
 
                                     <div className="chat__main">
                                         <div className="chat__main-wrapper">
-                                            <div className="bubble me">
-                                                <div className="p">
-                                                    <p>Hello gays</p>
-                                                </div>
-                                            </div>
                                             <div className="bubble you">
                                                 <div className="p">
-                                                    <p>Hello gays</p>
+                                                    <p>
+                                                        Hi, I am back from
+                                                        vacation
+                                                    </p>
                                                 </div>
                                             </div>
+                                            {mess?.map((el, i) => {
+                                                return (
+                                                    <div
+                                                        className="bubble me"
+                                                        key={el.text + i}
+                                                    >
+                                                        <div className="p">
+                                                            <p>{el.text}</p>
+                                                        </div>
+                                                    </div>
+                                                );
+                                            })}
                                         </div>
                                     </div>
                                     <div className="chat__footer">
-                                        <form action="">
+                                        <form onSubmit={sandMessage}>
                                             <div className="mess__group">
                                                 <input
                                                     type="text"
+                                                    value={text}
+                                                    onChange={(e) =>
+                                                        setText(e.target.value)
+                                                    }
                                                     placeholder="Message"
                                                 />
-                                                <FiSend />
+                                                <FiSend
+                                                    onClick={(e) =>
+                                                        sandMessage(e)
+                                                    }
+                                                />
                                             </div>
                                         </form>
                                     </div>
