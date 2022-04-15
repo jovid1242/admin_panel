@@ -152,8 +152,9 @@
                 background-size: cover;
 
                 .chat__main-wrapper {
+                    min-height: 44vh;
+                    max-height: 44vh;
                     padding: 20px;
-                    height: 250px;
                     overflow-y: scroll;
                 }
 

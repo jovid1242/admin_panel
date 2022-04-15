@@ -77,12 +77,14 @@ export default function Chat() {
     ];
 
     const searchUser = dataUser?.filter((val) => {
-        if (!textSearch === null) {
+        if (!textSearch === "") {
             return val;
         } else if (val.name?.toLowerCase().includes(textSearch.toLowerCase())) {
             return val;
         }
     });
+
+    console.log("searchUser", searchUser);
 
     const handleSearch = (e) => {
         setTextSearch(e.target.value);
@@ -99,7 +101,7 @@ export default function Chat() {
             <div className="row">
                 <div className="adm-col_12">
                     <Card
-                        height="400px"
+                        height="70vh"
                         content={
                             <div className="chat">
                                 <div className="chat__users">
@@ -120,41 +122,52 @@ export default function Chat() {
                                     </div>
                                     <ul
                                         className="users"
-                                        style={{ height: "350px" }}
+                                        style={{ height: "60vh" }}
                                     >
-                                        {searchUser?.map((el, i) => {
-                                            return (
-                                                <li
-                                                    className="user"
-                                                    key={el.id + i}
-                                                >
-                                                    <div className="user__info">
-                                                        <div className="user__avatar">
-                                                            <img
-                                                                src={el.avatar}
-                                                                alt="userAva"
-                                                            />
+                                        {!searchUser.length ? (
+                                            <center>
+                                                <p className="not_found">
+                                                    User is not found
+                                                </p>
+                                            </center>
+                                        ) : (
+                                            searchUser?.map((el, i) => {
+                                                return (
+                                                    <li
+                                                        className="user"
+                                                        key={el.id + i}
+                                                    >
+                                                        <div className="user__info">
+                                                            <div className="user__avatar">
+                                                                <img
+                                                                    src={
+                                                                        el.avatar
+                                                                    }
+                                                                    alt="userAva"
+                                                                />
+                                                            </div>
+                                                            <div className="__text">
+                                                                <p className="user__name">
+                                                                    {el.name}
+                                                                </p>
+                                                                <p className="user__mess">
+                                                                    {el.preMess}{" "}
+                                                                    PM
+                                                                </p>
+                                                            </div>
                                                         </div>
-                                                        <div className="__text">
-                                                            <p className="user__name">
-                                                                {el.name}
-                                                            </p>
-                                                            <p className="user__mess">
-                                                                {el.preMess} PM
+                                                        <div className="data__mes">
+                                                            <p>
+                                                                {el.date.getHours()}{" "}
+                                                                :{" "}
+                                                                {el.date.getMinutes()}{" "}
+                                                                PM
                                                             </p>
                                                         </div>
-                                                    </div>
-                                                    <div className="data__mes">
-                                                        <p>
-                                                            {el.date.getHours()}{" "}
-                                                            :{" "}
-                                                            {el.date.getMinutes()}{" "}
-                                                            PM
-                                                        </p>
-                                                    </div>
-                                                </li>
-                                            );
-                                        })}
+                                                    </li>
+                                                );
+                                            })
+                                        )}
                                     </ul>
                                 </div>
                                 <div className="chat__meta">
