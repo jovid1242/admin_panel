@@ -6,9 +6,9 @@ export default function Card(props) {
         <>
             <div
                 className="card"
-                style={{ width: props.width, height: props.height }}
+                style={{ width: props?.width, height: props?.height }}
             >
-                {props.content}
+                {props?.content}
             </div>
         </>
     );

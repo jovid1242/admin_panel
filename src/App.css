@@ -54,9 +54,19 @@ a {
 }
 
 .adm-col_12 {
-    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
 }
 
 .adm-col_6 {
-    width: 50%;
+    max-width: 50%;
+    flex: 0 0 50%;
+}
+.adm-col_4 {
+    max-width: 25%;
+    flex: 0 0 25%;
+}
+.adm-col_3 {
+    max-width: 33.3333%;
+    flex: 0 0 33.3333%;
 }
