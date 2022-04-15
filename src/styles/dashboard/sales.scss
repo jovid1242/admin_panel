@@ -1,16 +1,14 @@
 .row {
-    display: flex;
-    width: 100%;
-    margin-top: 20px;
-    color: #e0e6ed;
+    // display: flex;
+    // width: 100%;
+    // margin-top: 20px;
+    // color: #e0e6ed;
 
     .renevue {
-        flex: 0 0 61%;
         position: relative;
         padding: 20px;
         border-radius: 6px;
         background: #0e1726;
-        width: 830;
         min-height: 350 !important;
 
         p {
@@ -36,7 +34,6 @@
     }
 
     .byCategory {
-        flex: 0 0 30%;
         position: relative;
         border-radius: 6px;
         background: #0e1726;
@@ -94,8 +91,6 @@
 }
 
 .firstdBlocks {
-    width: 30%;
-
     .dailySales {
         background: #0e1726;
         border-radius: 8px;
@@ -138,6 +133,9 @@
                     vertical-align: middle;
                 }
             }
+        }
+        .columnChart {
+            min-height: 175px;
         }
     }
 }
@@ -186,7 +184,6 @@
 }
 
 .secondBlocks {
-    width: 30%;
     padding-bottom: 25px;
 
     .summary {
@@ -265,8 +262,6 @@
                             border-radius: 20px;
                             background-color: #191e3a;
                             display: flex;
-                            overflow: hidden;
-                            line-height: 0;
 
                             .sumProgress {
                                 // width: 90%;
@@ -285,8 +280,6 @@
 }
 
 .thirdBlocks {
-    width: 30%;
-
     .totalOrders {
         position: relative;
         background: #0e1726;
