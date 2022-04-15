@@ -5,12 +5,10 @@
     color: #e0e6ed;
 
     .renevue {
-        flex: 0 0 61%;
         position: relative;
         padding: 20px;
         border-radius: 6px;
         background: #0e1726;
-        width: 830;
         min-height: 350 !important;
 
         p {
@@ -36,7 +34,6 @@
     }
 
     .byCategory {
-        flex: 0 0 30%;
         position: relative;
         border-radius: 6px;
         background: #0e1726;

@@ -13,7 +13,7 @@ export default function Sales() {
     return (
         <div>
             <div className="row">
-                <div className="renevue">
+                <div className="renevue adm-col_8">
                     <div className="renevueHeadline">
                         <p>Renevue</p>
                         <div className="renevueDropdown">
@@ -31,7 +31,7 @@ export default function Sales() {
                         <BarChart />
                     </div>
                 </div>
-                <div className="byCategory">
+                <div className="byCategory adm-col_4">
                     <div className="headline">
                         <h5>Sales by Category</h5>
                     </div>
