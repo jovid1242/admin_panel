@@ -7,6 +7,7 @@ p {
     width: 100%;
     margin-top: 20px;
     color: #e0e6ed;
+
     .renevue {
         flex: 0 0 61%;
         position: relative;
@@ -15,29 +16,35 @@ p {
         background: #0e1726;
         width: 830;
         min-height: 350 !important;
+
         .renevueHeadline {
             display: flex;
             justify-content: space-between;
+
             p {
                 color: #e0e6ed;
                 font-size: 19px;
                 font-weight: 600;
                 letter-spacing: 0px;
             }
+
             svg {
                 color: #888ea8;
                 margin-top: 5px;
             }
         }
     }
+
     .byCategory {
         flex: 0 0 30%;
         position: relative;
         border-radius: 6px;
         background: #0e1726;
         padding: 20px 20px 0px 20px;
+
         .headline {
             margin-bottom: 15px;
+
             h5 {
                 letter-spacing: 0px;
                 font-size: 19px;
@@ -47,6 +54,7 @@ p {
         }
     }
 }
+
 .renevueDropdown:hover .dropdownMenu {
     opacity: 1;
     visibility: visible;
@@ -71,6 +79,7 @@ p {
     background: #1b2e4b;
     box-shadow: 0 6px 10px 0 rgb(0 0 0 / 14%), 0 1px 18px 0 rgb(0 0 0 / 12%),
         0 3px 5px -1px rgb(0 0 0 / 20%);
+
     .dropdownItem {
         padding: 6px 17px;
         clear: both;
@@ -78,7 +87,266 @@ p {
         color: #bfc9d4;
         font-size: 13px;
     }
+
     .dropdownItem:hover {
         color: #fff;
+    }
+}
+
+.firstdBlocks {
+    width: 30%;
+
+    .dailySales {
+        background: #0e1726;
+        border-radius: 8px;
+        height: 100%;
+
+        .dailyHeadline {
+            display: flex;
+            font-weight: 500;
+            padding: 20px;
+            justify-content: space-between;
+            align-items: center;
+
+            .headline {
+                h5 {
+                    font-size: 19px;
+                    font-weight: 600;
+                    color: #e0e6ed;
+                }
+
+                p {
+                    color: #888ea8;
+                    font-weight: 600;
+                }
+            }
+
+            .right {
+                background: #e2a03f;
+                padding: 13px 12px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 35px;
+                width: 35px;
+
+                svg {
+                    width: 25px;
+                    height: 25px;
+                    color: #0e1726;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+// Icons style
+.viloet {
+    background: #5c1ac3;
+}
+
+.salad {
+    background: #009688;
+}
+
+.dkYellow {
+    background: #e2a03f;
+}
+
+//Progress bar colors
+.lgBlue {
+    background-color: #4361ee;
+    background-image: linear-gradient(to right, #7579ff 0%, #b224ef 100%);
+
+}
+
+.lgSalad {
+    background-color: #4361ee;
+    background-image: linear-gradient(to right, #3cba92 0%, #0ba360 100%)
+}
+
+.rdOrange {
+    background-color: #4361ee;
+    background-image: linear-gradient(to right, #f09819 0%, #ff5858 100%);
+}
+
+//Profress width
+
+.w90 {
+    width: 90%;
+}
+
+.w65 {
+    width: 65%;
+}
+
+.w80 {
+    width: 80%;
+}
+
+
+
+
+
+
+
+
+
+.secondBlocks {
+    width: 30%;
+    padding-bottom: 25px;
+
+    .summary {
+        background: #0e1726;
+        border-radius: 8px;
+        height: 100%;
+
+        .summaryContent {
+            padding: 20px;
+        }
+
+        .headline {
+            margin-bottom: 54px;
+            display: flex;
+            justify-content: space-between;
+
+            h5 {
+                font-size: 19px;
+                color: #e0e6ed;
+                font-weight: 600;
+            }
+
+            svg {
+                color: #888ea8;
+            }
+        }
+
+        .summaryItems {
+            font-size: 17px;
+
+            .orderSummary {
+                .summaryList {
+                    margin-bottom: 30px;
+                    display: flex;
+
+                    .sumIcon {
+                        // background: #5c1ac3;
+                        padding: 8px 8px;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 34px;
+                        width: 34px;
+                        margin-right: 12px;
+
+                        svg {
+                            color: #dccff7;
+                        }
+                    }
+
+                    .sumDetails {
+                        width: 100%;
+                        align-self: center;
+
+                        .sumInfo {
+                            display: flex;
+                            justify-content: space-between;
+                            margin-bottom: 2px;
+
+                            h6 {
+                                font-size: 13px;
+                                font-weight: 600;
+                                color: #888ea8;
+                            }
+
+                            .sumCount {
+                                font-size: 12px;
+                                font-weight: 600;
+                                color: #888ea8;
+                            }
+                        }
+
+                        .sumStatus {
+                            height: 6px;
+                            border-radius: 20px;
+                            background-color: #191e3a;
+                            display: flex;
+                            overflow: hidden;
+                            line-height: 0;
+
+                            .sumProgress {
+                                // width: 90%;
+                                // background-color: #4361ee;
+                                border-radius: 16px;
+                                // background-image: linear-gradient(to right, #7579ff 0%, #b224ef 100%);
+                                box-shadow: 0 2px 4px rgb(0 69 255 / 15%), 0 8px 16px rgb(0 69 255 / 20%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.thirdBlocks {
+    width: 30%;
+
+    .totalOrders {
+        position: relative;
+        background: #0e1726;
+        border-radius: 8px;
+        height: 100%;
+
+        .headline {
+            display: flex;
+            font-weight: 500;
+            padding: 20px;
+            justify-content: space-between;
+
+            .shopCart {
+                background: #1abc9c;
+                padding: 13px 12px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 30px;
+                width: 30px;
+                margin-right: 14px;
+                border-radius: 12px;
+
+                svg {
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    color: #ddf5f0;
+                }
+            }
+
+            .totalOrders {
+                h5 {
+                    font-size: 26px;
+                    display: block;
+                    color: #e0e6ed;
+                    font-weight: 600;
+                    text-align: right;
+                }
+                p {
+                    font-size: 13px;
+                    color: #bfc9d4;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                }
+            }
+        }
     }
 }
