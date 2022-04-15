@@ -1,29 +1,32 @@
 import React from "react";
 import "../../styles/dashboard/analytics.scss";
 import Card from "../card/Card";
+import VerticalBarChart from "../VerticalBarChart";
 
 export default function Analytics() {
     return (
         <div className="analytics">
             <div className="row">
-                <Card
-                    width="600px"
-                    height="400px"
-                    content={
-                        <div>
-                            <h1>hello</h1>
-                        </div>
-                    }
-                />
-                <Card
-                    width="400px"
-                    height="400px"
-                    content={
-                        <div>
-                            <h1>hello</h1>
-                        </div>
-                    }
-                />
+                <div className="adm-col_6">
+                    <Card
+                        height="400px"
+                        content={
+                            <div>
+                                <VerticalBarChart />
+                            </div>
+                        }
+                    />
+                </div>
+                <div className="adm-col_4">
+                    <Card
+                        height="400px"
+                        content={
+                            <div>
+                                <VerticalBarChart />
+                            </div>
+                        }
+                    />
+                </div>
             </div>
         </div>
     );
