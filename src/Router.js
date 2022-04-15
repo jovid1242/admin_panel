@@ -4,6 +4,7 @@ import Sales from "./pages/Sales";
 import Home from "./pages/Home";
 import Analytics from "./pages/Analytics";
 import Chat from "./pages/Chat";
+import Buttons from "./pages/Buttons";
 
 export default function Router() {
     return (
@@ -13,6 +14,7 @@ export default function Router() {
                 <Route path="/dashboard" element={<Sales />} />
                 <Route path="/analytics" element={<Analytics />} />
                 <Route path="/chat" element={<Chat />} />
+                <Route path="/buttons" element={<Buttons />} />
             </Routes>
         </>
     );

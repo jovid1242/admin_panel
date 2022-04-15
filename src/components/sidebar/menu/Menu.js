@@ -47,10 +47,6 @@ export default function Menu() {
                 },
                 {
                     href: "#",
-                    title: "Contacts"
-                },
-                {
-                    href: "#",
                     title: "Invoice"
                 }
             ]
@@ -81,7 +77,29 @@ export default function Menu() {
         {
             href: "#",
             title: "Elements",
-            icon: <FaElementor />
+            icon: <FaElementor />,
+            submenu: [
+                {
+                    href: "/alerts",
+                    title: "Alerts"
+                },
+                {
+                    href: "/avatar",
+                    title: "Avatar"
+                },
+                {
+                    href: "/badges",
+                    title: "Badges"
+                },
+                {
+                    href: "/breadcrumbs",
+                    title: "Breadcrumbs"
+                },
+                {
+                    href: "/buttons",
+                    title: "Buttons"
+                }
+            ]
         },
         {
             href: "#",
