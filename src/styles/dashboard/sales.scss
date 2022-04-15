@@ -11,21 +11,9 @@
         background: #0e1726;
         min-height: 350 !important;
 
-        p {
-            color: red;
-        }
-
         .renevueHeadline {
             display: flex;
             justify-content: space-between;
-
-            p {
-                color: #e0e6ed;
-                font-size: 19px;
-                font-weight: 600;
-                letter-spacing: 0px;
-            }
-
             svg {
                 color: #888ea8;
                 margin-top: 5px;
