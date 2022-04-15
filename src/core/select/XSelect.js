@@ -31,9 +31,16 @@ function XSelect({ items, defaultItem, onChange }) {
 
     return (
         <div className="select">
-            <div className="select-content" onClick={() => setShowList(true)}>
+            <div
+                className="select-content"
+                onClick={() => setShowList(!showList)}
+            >
                 <p className="selected">{selected}</p>
-                <div className="select-button">
+                <div
+                    className={
+                        'select-button ' + (showList ? 'rotate-180' : '')
+                    }
+                >
                     <FaChevronDown />
                 </div>
             </div>
