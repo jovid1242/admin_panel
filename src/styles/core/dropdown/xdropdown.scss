@@ -1,5 +1,8 @@
 .x-dropdown{
     position: relative;
+    .x-dropdown__icon{
+        cursor: pointer;
+    }
     .x-dropdown-menu {
         position: absolute;
         right: 0px;

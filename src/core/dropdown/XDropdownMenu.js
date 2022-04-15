@@ -28,7 +28,7 @@ function XDropdownMenu({ items, onChange }) {
 
     return (
         <div className="x-dropdown" onClick={() => setShowList(!showList)}>
-            <span>
+            <span className="x-dropdown__icon">
                 <HiDotsHorizontal />
             </span>
             <div
