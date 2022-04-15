@@ -1,7 +1,7 @@
-import React from "react";
-import "../../styles/dashboard/analytics.scss";
-import Card from "../card/Card";
-import VerticalBarChart from "../VerticalBarChart";
+import React from 'react'
+import '../../styles/dashboard/analytics.scss'
+import Card from '../card/Card'
+import VerticalBarChart from '../charts/VerticalBarChart'
 
 export default function Analytics() {
     return (
@@ -29,5 +29,5 @@ export default function Analytics() {
                 </div>
             </div>
         </div>
-    );
+    )
 }
