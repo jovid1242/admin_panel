@@ -61,12 +61,12 @@ function BarChart() {
                 horizontalAlign: "right"
             },
             fill: {
-                opacity: 0.05,
+                opacity: 0.005,
                 type: "gradient",
                 gradient: {
                     shade: "dark",
                     type: "vertical",
-                    shadeIntensity: 0.5,
+                    shadeIntensity: 0.2,
                     gradientToColors: undefined,
                     inverseColors: true,
                     opacityFrom: 0.1,
@@ -79,7 +79,7 @@ function BarChart() {
                 show: true,
                 curve: "smooth",
                 lineCap: "butt",
-                colors: ["red", "blue"],
+                colors: ["#2196f3", "#e7515a"],
                 width: 2,
                 dashArray: 0
             }
