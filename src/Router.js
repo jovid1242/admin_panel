@@ -1,10 +1,11 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
-import Sales from "./pages/Sales";
-import Home from "./pages/Home";
-import Analytics from "./pages/Analytics";
-import Chat from "./pages/Chat";
-import Buttons from "./pages/Buttons";
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import Sales from './pages/Sales'
+import Home from './pages/Home'
+import Analytics from './pages/Analytics'
+import Chat from './pages/Chat'
+import Buttons from './pages/Buttons'
+import Basic from 'pages/forms/Basic'
 
 export default function Router() {
     return (
@@ -15,7 +16,8 @@ export default function Router() {
                 <Route path="/analytics" element={<Analytics />} />
                 <Route path="/chat" element={<Chat />} />
                 <Route path="/buttons" element={<Buttons />} />
+                <Route path="/forms/basic" element={<Basic />} />
             </Routes>
         </>
-    );
+    )
 }
