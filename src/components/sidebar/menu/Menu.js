@@ -1,140 +1,140 @@
-import React, { useState } from "react";
-import SubMenu from "../submenu/SubMenu";
-import { Link } from "react-router-dom";
-import { BiHomeAlt } from "react-icons/bi";
-import { RiApps2Line } from "react-icons/ri";
-import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
-import { CgComponents } from "react-icons/cg";
-import { SiInstructables, SiNuxtdotjs } from "react-icons/si";
-import { FaElementor, FaWpforms } from "react-icons/fa";
-import { MdFontDownload, MdOutlineWidgets } from "react-icons/md";
+import React, { useState } from 'react'
+import SubMenu from '../submenu/SubMenu'
+import { Link } from 'react-router-dom'
+import { BiHomeAlt } from 'react-icons/bi'
+import { RiApps2Line, RiTableLine } from 'react-icons/ri'
+import { IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io'
+import { CgComponents } from 'react-icons/cg'
+import { SiInstructables, SiNuxtdotjs } from 'react-icons/si'
+import { FaElementor, FaWpforms } from 'react-icons/fa'
+import { MdFontDownload, MdOutlineWidgets, MdBackupTable } from 'react-icons/md'
 
 export default function Menu() {
     const [activeTab, setActiveTab] = useState({
         visibility: false,
-        name: null
-    });
+        name: null,
+    })
 
     const link = [
         {
-            href: "#",
-            title: "Dashboard",
+            href: '#',
+            title: 'Dashboard',
             icon: <BiHomeAlt />,
             active: true,
             submenu: [
                 {
-                    href: "/dashboard",
-                    title: "Sales"
+                    href: '/dashboard',
+                    title: 'Sales',
                 },
                 {
-                    href: "/analytics",
-                    title: "Analytics"
-                }
-            ]
+                    href: '/analytics',
+                    title: 'Analytics',
+                },
+            ],
         },
         {
-            href: "#",
-            title: "Apps",
+            href: '#',
+            title: 'Apps',
             icon: <RiApps2Line />,
             submenu: [
                 {
-                    href: "/chat",
-                    title: "Chat"
+                    href: '/chat',
+                    title: 'Chat',
                 },
                 {
-                    href: "#",
-                    title: "Todo List"
+                    href: '#',
+                    title: 'Todo List',
                 },
                 {
-                    href: "#",
-                    title: "Invoice"
-                }
-            ]
+                    href: '#',
+                    title: 'Invoice',
+                },
+            ],
         },
         {
-            href: "#",
-            title: "Components",
+            href: '#',
+            title: 'Components',
             icon: <CgComponents />,
             submenu: [
                 {
-                    href: "#",
-                    title: "Tabs"
+                    href: '#',
+                    title: 'Tabs',
                 },
                 {
-                    href: "#",
-                    title: "Modals"
+                    href: '#',
+                    title: 'Modals',
                 },
                 {
-                    href: "#",
-                    title: "Cards"
+                    href: '#',
+                    title: 'Cards',
                 },
                 {
-                    href: "#",
-                    title: "Carousel"
-                }
-            ]
+                    href: '#',
+                    title: 'Carousel',
+                },
+            ],
         },
         {
-            href: "#",
-            title: "Elements",
+            href: '#',
+            title: 'Elements',
             icon: <FaElementor />,
             submenu: [
                 {
-                    href: "/alerts",
-                    title: "Alerts"
+                    href: '/alerts',
+                    title: 'Alerts',
                 },
                 {
-                    href: "/avatar",
-                    title: "Avatar"
+                    href: '/avatar',
+                    title: 'Avatar',
                 },
                 {
-                    href: "/badges",
-                    title: "Badges"
+                    href: '/badges',
+                    title: 'Badges',
                 },
                 {
-                    href: "/breadcrumbs",
-                    title: "Breadcrumbs"
+                    href: '/breadcrumbs',
+                    title: 'Breadcrumbs',
                 },
                 {
-                    href: "/buttons",
-                    title: "Buttons"
-                }
-            ]
+                    href: '/buttons',
+                    title: 'Buttons',
+                },
+            ],
         },
         {
-            href: "#",
-            title: "Fonts Icons",
-            icon: <MdFontDownload />
+            href: '#',
+            title: 'Fonts Icons',
+            icon: <MdFontDownload />,
         },
         {
-            href: "#",
-            title: "Widgets",
-            icon: <MdOutlineWidgets />
+            href: '#',
+            title: 'Widgets',
+            icon: <MdOutlineWidgets />,
         },
         {
-            href: "#",
-            title: "Tables",
-            icon: <SiInstructables />
+            href: '/table',
+            title: 'Tables',
+            icon: <RiTableLine />,
         },
         {
-            href: "#",
-            title: "DataTables",
-            icon: <SiInstructables />
+            href: '#',
+            title: 'DataTables',
+            icon: <MdBackupTable />,
         },
         {
-            href: "#",
-            title: "Forms",
-            icon: <FaWpforms />
-        }
-    ];
+            href: '#',
+            title: 'Forms',
+            icon: <FaWpforms />,
+        },
+    ]
 
     const toggleMenuBtn = (name) => {
         if (activeTab.name === name && activeTab.visibility) {
-            setActiveTab({ visibility: false, name: name });
+            setActiveTab({ visibility: false, name: name })
         } else {
-            setActiveTab({ visibility: true, name: name });
+            setActiveTab({ visibility: true, name: name })
         }
-    };
+    }
 
     return (
         <>
@@ -144,8 +144,8 @@ export default function Menu() {
                         <li
                             className={
                                 el.active
-                                    ? "menu_categories__list activeTabMenu"
-                                    : "menu_categories__list"
+                                    ? 'menu_categories__list activeTabMenu'
+                                    : 'menu_categories__list'
                             }
                             key={el.title + i}
                         >
@@ -188,9 +188,9 @@ export default function Menu() {
                                 ) : null
                             ) : null}
                         </li>
-                    );
+                    )
                 })}
             </ul>
         </>
-    );
+    )
 }

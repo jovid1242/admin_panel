@@ -79,10 +79,15 @@ a {
     color: #bfc9d4;
     font-weight: 700;
 }
-.show{
+.show {
     visibility: visible !important;
     opacity: 1 !important;
 }
-.rotate-180{
+.rotate-180 {
     transform: rotate(180deg);
+}
+
+/* margin */
+.mt-2 {
+    margin-top: 2rem;
 }
