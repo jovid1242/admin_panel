@@ -27,17 +27,17 @@ export default function Xtable({ data, tableTheme }) {
                         {data?.body?.map((item, i) => {
                             return (
                                 <tr key={i}>
-                                    {item.tr?.map((el, inx) => {
+                                    {item?.map((el) => {
                                         return (
                                             <td
-                                                key={el.td + inx}
+                                                key={el.id + i}
                                                 style={{
                                                     backgroundColor:
                                                         tableTheme?.bgBody,
                                                     border: tableTheme?.borderBody,
                                                 }}
                                             >
-                                                {el.td}
+                                                {el.title}
                                             </td>
                                         )
                                     })}

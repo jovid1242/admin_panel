@@ -17,58 +17,39 @@ export default function Table() {
             },
         ],
         body: [
-            {
-                tr: [
-                    {
-                        td: 'Shaun Park',
-                    },
-                    {
-                        td: 'Shaun Park',
-                    },
-                    {
-                        td: 'Shaun Park',
-                    },
-                ],
-            },
-            {
-                tr: [
-                    {
-                        td: 'Shaun Park',
-                    },
-                    {
-                        td: 'Shaun Park',
-                    },
-                    {
-                        td: 'Shaun Park',
-                    },
-                ],
-            },
-            {
-                tr: [
-                    {
-                        td: 'Shaun Park',
-                    },
-                    {
-                        td: 'Shaun Park',
-                    },
-                    {
-                        td: 'Shaun Park',
-                    },
-                ],
-            },
-            {
-                tr: [
-                    {
-                        td: 'Shaun Park',
-                    },
-                    {
-                        td: 'Shaun Park',
-                    },
-                    {
-                        td: 'Shaun Park',
-                    },
-                ],
-            },
+            [
+                {
+                    title: 'Shaun Park',
+                },
+                {
+                    title: 'Shaun Park',
+                },
+                {
+                    title: 'Shaun Park',
+                },
+            ],
+            [
+                {
+                    title: 'Shaun Park',
+                },
+                {
+                    title: 'Shaun Park',
+                },
+                {
+                    title: 'Shaun Park',
+                },
+            ],
+            [
+                {
+                    title: 'Shaun Park',
+                },
+                {
+                    title: 'Shaun Park',
+                },
+                {
+                    title: 'Shaun Park',
+                },
+            ],
         ],
     }
 
