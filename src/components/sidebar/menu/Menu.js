@@ -125,6 +125,12 @@ export default function Menu() {
             href: '#',
             title: 'Forms',
             icon: <FaWpforms />,
+            submenu: [
+                {
+                    href: '/forms/basic',
+                    title: 'Basic',
+                },
+            ],
         },
     ]
 
@@ -150,7 +156,10 @@ export default function Menu() {
                             key={el.title + i}
                         >
                             <Link to={el.href} className="m_list">
-                                <div className="list">
+                                <div
+                                    className="list"
+                                    onClick={() => toggleMenuBtn(el.title)}
+                                >
                                     <div className="list_name">
                                         <div className="list_icon">
                                             {el.icon}
@@ -158,12 +167,7 @@ export default function Menu() {
                                         <span>{el.title}</span>
                                     </div>
                                     {el.submenu ? (
-                                        <div
-                                            className="list_vicon"
-                                            onClick={() =>
-                                                toggleMenuBtn(el.title)
-                                            }
-                                        >
+                                        <div className="list_vicon">
                                             {activeTab.name === el.title ? (
                                                 activeTab.visibility ? (
                                                     <IoMdArrowDropdown />

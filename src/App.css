@@ -86,8 +86,6 @@ a {
 .rotate-180 {
     transform: rotate(180deg);
 }
-
-/* margin */
 .mt-2 {
     margin-top: 2rem;
 }

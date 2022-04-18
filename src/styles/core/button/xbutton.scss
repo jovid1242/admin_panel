@@ -1,0 +1,16 @@
+@import '../../variables.scss';
+.primary_btn {
+        display: inline-block;
+        border: none;
+        text-align: center;
+        color: #fff;
+        padding: 0.6rem 1.25rem;
+        font-size: 14px;
+        margin-top: 1.5rem;
+        width: 20%;
+        background-color: $x-light-blue;
+        box-shadow: $btn-primary-box-shadow;
+        border: 1px solid $btn-primary-box-shadow;
+        border-radius: 0.25rem;
+        cursor: pointer;
+}

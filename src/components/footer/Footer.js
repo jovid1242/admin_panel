@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react'
+import '../../styles/footer/footer.scss'
 
 export default function Footer() {
     return (
@@ -11,10 +12,10 @@ export default function Footer() {
                         </a>
                     </p>
                     <p>
-                        <a href="#">Coded with </a>
+                        <a href="#">Coded with Repost.Space</a>
                     </p>
                 </div>
             </div>
         </>
-    );
+    )
 }

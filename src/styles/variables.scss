@@ -3,9 +3,16 @@ $x-dark-blue: #0e1726;
 $x-darker-blue: #060818;
 $x-gray: #888ea8;
 $x-light-gray: #e0e6ed;
+$x-light-blue: #4361ee;
+$x-box-shadow-btn: 0 10px 20px -10px rgb(27 85 226 / 59%);
+$x-crimsom: #e7515a;
+$x-royal-blue: #1b2e4b;
 
 // Global Variables
 $palette-primary: $x-dark-blue;
 $palette-secondary: $x-darker-blue;
 $palette-text: $x-gray;
 $palette-headlines: $x-light-gray;
+$btn-primary: $x-light-blue;
+$btn-primary-box-shadow: $x-box-shadow-btn;
+$secondary-text: #ebedf2;
