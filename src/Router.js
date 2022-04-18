@@ -6,6 +6,7 @@ import Analytics from './pages/Analytics'
 import Chat from './pages/Chat'
 import Buttons from './pages/Buttons'
 import Basic from 'pages/forms/Basic'
+import Table from 'pages/Table'
 
 export default function Router() {
     return (
@@ -17,6 +18,7 @@ export default function Router() {
                 <Route path="/chat" element={<Chat />} />
                 <Route path="/buttons" element={<Buttons />} />
                 <Route path="/forms/basic" element={<Basic />} />
+                <Route path="/table" element={<Table />} />
             </Routes>
         </>
     )
