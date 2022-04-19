@@ -80,7 +80,7 @@ export default function Menu() {
             icon: <FaElementor />,
             submenu: [
                 {
-                    href: '/alerts',
+                    href: '/elements/alerts',
                     title: 'Alerts',
                 },
                 {

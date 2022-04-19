@@ -1,0 +1,70 @@
+@import '../../variables.scss';
+
+.alert {
+    padding: 0.9375rem;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+    height: 22px;
+    .closebtn {
+        float: right;
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 1;
+        cursor: pointer;
+        opacity: 1;
+        transition: 0.3s ease;
+    }
+    .closebtn:hover {
+        opacity: .5;
+    }
+}
+
+
+.alert-primary {
+    background-color: rgba(67, 97, 238, 0.15);
+    color: $btn-primary;
+}
+
+.alert-warning {
+    background-color: rgba(226, 160, 63, 0.15);
+    color: #e2a03f;
+}
+
+.alert-success {
+    color: #1abc9c;
+    background-color: rgba(26, 188, 156, 0.15);
+}
+
+.alert-info {
+    color: #2196f3;
+    background-color: rgba(33, 150, 243, 0.15);
+}
+
+.alert-error {
+    color: #e7515a;
+    background-color: rgba(231, 81, 90, 0.15);
+}
+
+.alert-outline-primary {
+    color: $palette-text;
+    border: 1px solid #4361ee;
+    border-color: #4361ee;
+    border-radius: 5px;
+}
+
+.alert-outline-error {
+    color: $palette-text;
+    border: 1px solid #e7515a;
+    border-color: #e7515a;
+    border-radius: 5px;
+}
+
+.alert-solid-primary {
+    color: #fff;
+    background-color: #4361ee;
+}
+
+.alert-solid-danger {
+    color: #fff;
+    background-color: #e2a03f;
+}

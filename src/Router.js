@@ -5,8 +5,9 @@ import Home from './pages/Home'
 import Analytics from './pages/Analytics'
 import Chat from './pages/Chat'
 import Buttons from './pages/Buttons'
-import Basic from 'pages/forms/Basic'
+import Basic from 'pages/basic/Basic'
 import Table from 'pages/Table'
+import Alerts from 'pages/elements/Alerts'
 import DataTables from 'pages/DataTables'
 
 export default function Router() {
@@ -20,6 +21,7 @@ export default function Router() {
                 <Route path="/buttons" element={<Buttons />} />
                 <Route path="/forms/basic" element={<Basic />} />
                 <Route path="/table" element={<Table />} />
+                <Route path="/elements/alerts" element={<Alerts />} />
                 <Route path="/dt-table" element={<DataTables />} />
             </Routes>
         </>
