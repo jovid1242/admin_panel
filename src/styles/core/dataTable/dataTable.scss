@@ -1,0 +1,26 @@
+.xdata-table {
+    width: 100%;
+
+    .table__wrapper {
+        .table__wrapper-head {
+            margin: 10px 0;
+        }
+        .paginate_wrapper {
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .select_wrapper {
+                margin: 10px 0;
+                display: flex;
+
+                h4 {
+                    width: 35%;
+                    color: #fff;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
