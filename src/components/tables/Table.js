@@ -7,49 +7,56 @@ export default function Table() {
     const dataTable = {
         head: [
             {
-                name: 'Name',
+                rus: '#',
+                eng: 'id',
+            },
+            { rus: 'Заголовок', eng: 'title' },
+            {
+                rus: 'Описание',
+                eng: 'body',
             },
             {
-                name: 'Shaun Park',
-            },
-            {
-                name: 'Shaun',
+                rus: 'User-ID',
+                eng: 'userId',
             },
         ],
         body: [
-            [
-                {
-                    title: 'Shaun Park',
-                },
-                {
-                    title: 'Shaun Park',
-                },
-                {
-                    title: 'Shaun Park',
-                },
-            ],
-            [
-                {
-                    title: 'Shaun Park',
-                },
-                {
-                    title: 'Shaun Park',
-                },
-                {
-                    title: 'Shaun Park',
-                },
-            ],
-            [
-                {
-                    title: 'Shaun Park',
-                },
-                {
-                    title: 'Shaun Park',
-                },
-                {
-                    title: 'Shaun Park',
-                },
-            ],
+            {
+                id: 1,
+                userId: 22,
+                title: 'Shaun Park',
+                body: 'sdcsdcsdcsd',
+            },
+            {
+                id: 1,
+                userId: 22,
+                title: 'Shaun Park',
+                body: 'sdcsdcsdcsd',
+            },
+            {
+                id: 1,
+                userId: 22,
+                title: 'Shaun Park',
+                body: 'sdcsdcsdcsd',
+            },
+            {
+                id: 1,
+                userId: 22,
+                title: 'Shaun Park',
+                body: 'sdcsdcsdcsd',
+            },
+            {
+                id: 1,
+                userId: 22,
+                title: 'Shaun Park',
+                body: 'sdcsdcsdcsd',
+            },
+            {
+                id: 1,
+                userId: 22,
+                title: 'Shaun Park',
+                body: 'sdcsdcsdcsd',
+            },
         ],
     }
 
@@ -101,7 +108,11 @@ export default function Table() {
                     <XCard
                         title="Simple Table"
                         cardBody={
-                            <Xtable data={dataTable} tableTheme={tableTheme1} />
+                            <Xtable
+                                data={dataTable}
+                                tableTheme={tableTheme1}
+                                search=""
+                            />
                         }
                         actions={false}
                     />
@@ -112,7 +123,11 @@ export default function Table() {
                 <XCard
                     title="Hover Table"
                     cardBody={
-                        <Xtable data={dataTable} tableTheme={tableTheme2} />
+                        <Xtable
+                            data={dataTable}
+                            tableTheme={tableTheme2}
+                            search=""
+                        />
                     }
                     actions={false}
                 />
@@ -122,7 +137,11 @@ export default function Table() {
                 <XCard
                     title="Striped Table"
                     cardBody={
-                        <Xtable data={dataTable} tableTheme={tableTheme3} />
+                        <Xtable
+                            data={dataTable}
+                            tableTheme={tableTheme3}
+                            search=""
+                        />
                     }
                     actions={false}
                 />
@@ -132,7 +151,11 @@ export default function Table() {
                 <XCard
                     title="Table Light"
                     cardBody={
-                        <Xtable data={dataTable} tableTheme={tableTheme4} />
+                        <Xtable
+                            data={dataTable}
+                            tableTheme={tableTheme4}
+                            search=""
+                        />
                     }
                     actions={false}
                 />
@@ -142,7 +165,11 @@ export default function Table() {
                 <XCard
                     title="Captions"
                     cardBody={
-                        <Xtable data={dataTable} tableTheme={tableTheme5} />
+                        <Xtable
+                            data={dataTable}
+                            tableTheme={tableTheme5}
+                            search=""
+                        />
                     }
                     actions={false}
                 />

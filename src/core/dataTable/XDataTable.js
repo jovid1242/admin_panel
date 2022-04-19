@@ -1,26 +1,57 @@
 import React, { useEffect, useState } from 'react'
-// import Pagination from '../components/pagination'
+import XPagination from 'core/pagination/XPagination'
+import XSelect from 'core/select/XSelect'
+import XInput from 'core/forms/XInput'
 import Xtable from 'core/table/Xtable'
 import axios from 'axios'
 import 'styles/core/dataTable/dataTable.scss'
 
+const selectItems = [5, 10, 20]
+
 export default function XDataTable() {
-    const [posts, setPosts] = useState([])
     const [perPage, setPerPage] = useState(5)
     const [page, setPage] = useState(1)
     const [search, setSearch] = useState('')
 
-    const handleSelect = (e) => {
-        setPerPage(e.target.value)
-    }
+    const [dataTableHead, setDataTableHead] = useState([
+        {
+            rus: '#',
+            eng: 'id',
+        },
+        { rus: 'Заголовок', eng: 'title' },
+        {
+            rus: 'Описание',
+            eng: 'body',
+        },
+        {
+            rus: 'User-ID',
+            eng: 'userId',
+        },
+    ])
+    const [dataTableBody, setDataTableBody] = useState([])
 
     const handleActivePage = (num) => {
         setPage(num)
     }
 
-    // const lastPage = page * perPage
-    // const firstPage = lastPage - perPage
-    // const curentPage = posts.slice(firstPage, lastPage)
+    const handleSearch = (e) => {
+        setSearch(e.target.value)
+    }
+
+    useEffect(() => {
+        axios.get('https://jsonplaceholder.typicode.com/posts').then((res) => {
+            setDataTableBody(res.data)
+        })
+    }, [])
+
+    const lastPage = page * perPage
+    const firstPage = lastPage - perPage
+    const curentPage = dataTableBody.slice(firstPage, lastPage)
+
+    const dataTable = {
+        head: dataTableHead,
+        body: curentPage,
+    }
 
     var tableTheme2 = {
         name: 'hoverTable',
@@ -30,87 +61,40 @@ export default function XDataTable() {
         bgBody: null,
     }
 
-    const dataTable = {
-        head: [
-            {
-                name: '#',
-            },
-            {
-                name: 'Заголовок',
-            },
-            {
-                name: 'Описание',
-            },
-            {
-                name: 'Username',
-            },
-        ],
-        body: [],
-    }
-
-    function sliceIntoChunks(arr, chunkSize) {
-        const res = []
-        for (let i = 0; i < arr.length; i += chunkSize) {
-            const chunk = arr.slice(i, i + chunkSize)
-            res.push(chunk)
-        }
-        return res
-    }
-
-    const mapPosts = () => {
-        const arr = sliceIntoChunks(posts, 3)
-        arr?.forEach((el) => {
-            dataTable.body.push(el)
-
-            console.log('ffff', dataTable.body)
-        })
-    }
-
-    useEffect(() => {
-        axios.get('https://jsonplaceholder.typicode.com/posts').then((res) => {
-            setPosts(res.data)
-        })
-    }, [])
-
-    useEffect(() => {
-        mapPosts()
-    }, [posts])
-
     return (
         <>
-            <div className="home">
-                <div className="container">
-                    <div className="home__wrapper">
-                        <div className="header_table">
-                            <div className="search">
-                                <input
-                                    type="text"
-                                    onChange={(e) => setSearch(e.target.value)}
-                                    placeholder="Поиск..."
-                                />
-                            </div>
+            <div className="xdata-table">
+                <div className="table__wrapper">
+                    <div className="table__wrapper-head">
+                        <div className="search">
+                            <XInput
+                                name="text"
+                                placeholder="Поиск..."
+                                onChange={(e) => handleSearch(e)}
+                                type="text"
+                            />
                         </div>
-                        <div className="table_list">
-                            <Xtable data={dataTable} tableTheme={tableTheme2} />
+                    </div>
+                    <div className="xdata-table__table">
+                        <Xtable
+                            data={dataTable}
+                            tableTheme={tableTheme2}
+                            search={search}
+                        />
+                    </div>
+                    <div className="paginate_wrapper">
+                        <div className="select_wrapper">
+                            <h4>Показ страницы: </h4>
+                            <XSelect
+                                items={selectItems}
+                                onChange={(e) => setPerPage(e)}
+                            />
                         </div>
-                        <div className="paginate_wrapper">
-                            <div className="select_wrapper">
-                                <h4>Кол-во пост на странице: </h4>
-                                <select
-                                    className="form-select"
-                                    onChange={handleSelect}
-                                >
-                                    <option value="5">5</option>
-                                    <option value="10">10</option>
-                                    <option value="20">20</option>
-                                </select>
-                            </div>
-                            {/* <Pagination
-                                perPage={perPage}
-                                totalItems={posts.length - 1}
-                                handleActivePage={handleActivePage}
-                            /> */}
-                        </div>
+                        <XPagination
+                            perPage={perPage}
+                            totalItems={dataTableBody.length - 1}
+                            handleActivePage={handleActivePage}
+                        />
                     </div>
                 </div>
             </div>
