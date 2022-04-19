@@ -7,6 +7,7 @@ import Chat from './pages/Chat'
 import Buttons from './pages/Buttons'
 import Basic from 'pages/forms/Basic'
 import Table from 'pages/Table'
+import DataTables from 'pages/DataTables'
 
 export default function Router() {
     return (
@@ -19,6 +20,7 @@ export default function Router() {
                 <Route path="/buttons" element={<Buttons />} />
                 <Route path="/forms/basic" element={<Basic />} />
                 <Route path="/table" element={<Table />} />
+                <Route path="/dt-table" element={<DataTables />} />
             </Routes>
         </>
     )

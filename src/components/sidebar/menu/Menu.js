@@ -117,7 +117,7 @@ export default function Menu() {
             icon: <RiTableLine />,
         },
         {
-            href: '#',
+            href: '/dt-table',
             title: 'DataTables',
             icon: <MdBackupTable />,
         },

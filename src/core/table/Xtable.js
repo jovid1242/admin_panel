@@ -1,7 +1,7 @@
 import React from 'react'
 import 'styles/core/table/table.scss'
 
-export default function Xtable({ data, tableTheme }) {
+export default function Xtable({ data, tableTheme, search }) {
     return (
         <>
             <div class={`table-responsive ${tableTheme?.name}`}>
@@ -11,39 +11,76 @@ export default function Xtable({ data, tableTheme }) {
                             {data?.head?.map((item, i) => {
                                 return (
                                     <th
-                                        key={item.name + i}
+                                        key={item.rus + i}
                                         style={{
                                             backgroundColor: tableTheme?.bgHead,
                                             border: tableTheme?.borderHead,
                                         }}
                                     >
-                                        {item.name}
+                                        {item.rus}
                                     </th>
                                 )
                             })}
                         </tr>
                     </thead>
                     <tbody>
-                        {data?.body?.map((item, i) => {
-                            return (
-                                <tr key={i}>
-                                    {item.tr?.map((el, inx) => {
-                                        return (
-                                            <td
-                                                key={el.td + inx}
-                                                style={{
-                                                    backgroundColor:
-                                                        tableTheme?.bgBody,
-                                                    border: tableTheme?.borderBody,
-                                                }}
-                                            >
-                                                {el.td}
-                                            </td>
-                                        )
-                                    })}
-                                </tr>
-                            )
-                        })}
+                        {data?.body
+                            ?.filter((val) => {
+                                if (!search === '') {
+                                    return val
+                                } else if (
+                                    val.title
+                                        ?.toLowerCase()
+                                        .includes(search?.toLowerCase())
+                                ) {
+                                    return val
+                                }
+                            })
+                            .map((item, i) => {
+                                return (
+                                    <tr key={item?.id + i}>
+                                        <td
+                                            style={{
+                                                backgroundColor:
+                                                    tableTheme?.bgBody,
+                                                border: tableTheme?.borderBody,
+                                            }}
+                                        >
+                                            {i + 1}
+                                        </td>
+                                        <td
+                                            key={item.id && item.title + i}
+                                            style={{
+                                                backgroundColor:
+                                                    tableTheme?.bgBody,
+                                                border: tableTheme?.borderBody,
+                                            }}
+                                        >
+                                            {item.title}
+                                        </td>
+                                        <td
+                                            key={item.id && item.title + i}
+                                            style={{
+                                                backgroundColor:
+                                                    tableTheme?.bgBody,
+                                                border: tableTheme?.borderBody,
+                                            }}
+                                        >
+                                            {item.body}
+                                        </td>
+                                        <td
+                                            key={item.id && item.title + i}
+                                            style={{
+                                                backgroundColor:
+                                                    tableTheme?.bgBody,
+                                                border: tableTheme?.borderBody,
+                                            }}
+                                        >
+                                            {item.userId}
+                                        </td>
+                                    </tr>
+                                )
+                            })}
                     </tbody>
                 </table>
             </div>
