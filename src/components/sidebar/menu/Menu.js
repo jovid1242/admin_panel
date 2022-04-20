@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import SubMenu from '../submenu/SubMenu'
 import { Link } from 'react-router-dom'
-import { BiHomeAlt } from 'react-icons/bi'
+import { BiHomeAlt, BiChevronDown } from 'react-icons/bi'
 import { RiApps2Line, RiTableLine } from 'react-icons/ri'
 import { IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io'
 import { CgComponents } from 'react-icons/cg'
@@ -84,7 +84,7 @@ export default function Menu() {
                     title: 'Alerts',
                 },
                 {
-                    href: '/avatar',
+                    href: '/elements/avatar',
                     title: 'Avatar',
                 },
                 {
@@ -170,7 +170,7 @@ export default function Menu() {
                                         <div className="list_vicon">
                                             {activeTab.name === el.title ? (
                                                 activeTab.visibility ? (
-                                                    <IoMdArrowDropdown />
+                                                    <BiChevronDown />
                                                 ) : (
                                                     <IoMdArrowDropup />
                                                 )

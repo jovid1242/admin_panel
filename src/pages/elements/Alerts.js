@@ -1,6 +1,6 @@
 import React from 'react'
 import XCard from 'core/card/XCard'
-import XAlert from 'core/alerts/XAlert'
+import XAlert from 'core/elements/XAlert'
 
 export default function Alerts() {
     return (

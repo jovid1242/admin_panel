@@ -1,5 +1,5 @@
 import React from 'react'
-import 'styles/core/alerts/xalert.scss'
+import 'styles/core/elements/xalert.scss'
 
 export default function XAlert({ type }) {
     return (

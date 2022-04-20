@@ -1,0 +1,90 @@
+@import '../../variables.scss';
+
+.custom_bcg {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    background-color: $palette-secondary;
+    border-radius: 8px;
+
+    .avatar_title {
+        color: $palette-text;
+        font-size: 16px;
+
+        code {
+            color: $x-crimsom;
+        }
+    }
+}
+
+//AVATAR CIRCLE SIZES
+.avatar-avatar-big {
+    width: 5.125rem;
+    height: 5.125rem;
+
+    .rounded_circle {
+        border-radius: 50%;
+    }
+}
+
+.avatar-avatar-middle {
+    width: 3.5rem;
+    height: 3.5rem;
+
+    .rounded_circle {
+        border-radius: 50%;
+    }
+}
+
+.avatar-avatar-small {
+    width: 2.5rem;
+    height: 2.5rem;
+
+    .rounded_circle {
+        border-radius: 50%;
+    }
+}
+
+.avatar {
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-style: none;
+    }
+}
+
+
+
+//INDICATOR ONLINE
+
+.indicator_online::before {
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    right: 11%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid $x-light-gray;
+    background-color: #0278ff;
+    box-shadow: $btn-primary-box-shadow;
+}
+
+//AVATAR ROUNDED SIZES
+
+.avatar-rounded-big {
+    width: 5rem;
+    height: 5rem;
+    .rounded_circle {
+        border-radius: 0.25rem !important;
+    }
+}
+.avatar-rounded-primary {
+    width: 3rem;
+    height: 3rem;
+    .rounded_circle {
+        border-radius: 0.25rem !important;
+    }
+}
