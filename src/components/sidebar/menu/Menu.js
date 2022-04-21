@@ -99,6 +99,10 @@ export default function Menu() {
                     href: '/buttons',
                     title: 'Buttons',
                 },
+                {
+                    href: '/elements/button-groups',
+                    title: 'Button Groups',
+                },
             ],
         },
         {

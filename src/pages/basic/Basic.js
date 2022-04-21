@@ -22,7 +22,7 @@ export default function Basic() {
                                     </>
                                 }
                             />
-                            <XButton />
+                            <XButton name={'Submit'} type={'primary'} />
                         </>
                     }
                 />
@@ -40,7 +40,7 @@ export default function Basic() {
                                     </>
                                 }
                             />
-                            <XButton />
+                            <XButton name={'Submit'} type={'primary'} />
                         </>
                     }
                 />
@@ -58,7 +58,7 @@ export default function Basic() {
                                     </>
                                 }
                             />
-                            <XButton />
+                            <XButton name={'Submit'} type={'primary'} />
                         </>
                     }
                 />
