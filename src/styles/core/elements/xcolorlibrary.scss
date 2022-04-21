@@ -1,0 +1,108 @@
+@import '../../variables.scss';
+.color-box {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #060818;
+    border-radius: 6px;
+    box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 5%);
+    background: #060818;
+    width: 25%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    .color-example {
+        width: 80px;
+        height: 80px;
+        margin-right: 20px;
+        // background-color: #4361ee;
+        border-radius: 6px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .color-describtion {
+        flex: 1;
+        padding: 10px;
+        .color-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: $palette-text;
+        }
+        span {
+            font-size: 14px;
+            color: $palette-text;
+            font-weight: 600;
+        }
+    }
+}
+
+.color-primary {
+    background-color: $x-light-blue;
+}
+
+.color-info {
+    background-color: $blue;
+}
+
+.color-success {
+    background-color: $success;
+}
+
+.color-warning {
+    background-color: $warning;
+}
+
+.color-danger {
+    background-color: $danger;
+}
+
+.color-secondary {
+    background-color: $purple;
+}
+
+.color-dark {
+    background-color: $dark;
+}
+
+.primary-light {
+    background-color: $primary-light;
+}
+.info-light {
+    background-color: $info-light;
+}
+.success-light {
+    background-color: $success-light;
+}
+.warning-light {
+    background-color: $warning-light;
+}
+.danger-light {
+    background-color: $danger-light;
+}
+.secondary-light {
+    background-color: $secondary-light;
+}
+.dark-light {
+    background-color: $dark-light;
+}
+
+.white {
+    background-color: $white;
+}
+.teal {
+    background-color: $teal;
+}
+.yellow {
+    background-color: $yellow;
+}
+.pink {
+    background-color: $pink;
+}
+.indigo {
+    background-color: $indigo;
+}
+.green {
+    background-color: $green;
+}
+.orange {
+    background-color: $orange;
+}

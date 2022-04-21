@@ -29,13 +29,22 @@ $primary: #007bff;
 $secondary: #6c757d;
 $success: #28a745;
 $info: #17a2b8;
-$warning: #ffc107;
+$warning: #e2a03f;
 $warning-box-shadow: 0 10px 20px -10px rgb(226 160 63 / 59%);
-$danger: #dc3545;
+$danger: #e7515a;
 $danger-box-shadow: 0 10px 20px -10px rgb(231 81 90 / 59%);
 $light: #f8f9fa;
-$dark: #343a40;
+$dark: #3b3f5c;
 $dark-box-shadow: 0 10px 20px -10px rgb(59 63 92 / 59%);
+
+$primary-light: #eaf1ff;
+$info-light: #e7f7ff;
+$success-light: #ddf5f0;
+$warning-light: #fff9ed;
+$danger-light: #fff5f5;
+$secondary-light: #f3effc;
+$dark-light: #e3e4eb;
+
 
 // Global Variables
 $palette-primary: $x-dark-blue;

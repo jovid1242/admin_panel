@@ -103,6 +103,10 @@ export default function Menu() {
                     href: '/elements/button-groups',
                     title: 'Button Groups',
                 },
+                {
+                    href: '/elements/color-library',
+                    title: 'Color Library',
+                },
             ],
         },
         {

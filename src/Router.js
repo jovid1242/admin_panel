@@ -11,6 +11,8 @@ import Alerts from 'pages/elements/Alerts'
 import DataTables from 'pages/DataTables'
 import Avatar from 'pages/elements/Avatar'
 import Badges from 'pages/elements/Badges'
+import ButtonGroups from 'components/elements/ButtonGroups'
+import ColorLibrary from 'pages/elements/ColorLibrary'
 
 export default function Router() {
     return (
@@ -27,6 +29,14 @@ export default function Router() {
                 <Route path="/dt-table" element={<DataTables />} />
                 <Route path="/elements/avatar" element={<Avatar />} />
                 <Route path="/elements/badges" element={<Badges />} />
+                <Route
+                    path="/elements/button-groups"
+                    element={<ButtonGroups />}
+                />
+                <Route
+                    path="/elements/color-library"
+                    element={<ColorLibrary />}
+                />
             </Routes>
         </>
     )

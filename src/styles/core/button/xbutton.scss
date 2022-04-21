@@ -38,7 +38,7 @@ button {
         &:hover {
                 background-color: $x-light-blue;
                 color: #fff !important;
-                border: none;
+                border: 1px solid $x-light-blue;
         }
 }
 
@@ -56,7 +56,7 @@ button {
         &:hover {
                 background-color: $x-light-blue;
                 color: #fff !important;
-                border: none;
+                border: 1px solid $x-light-blue;
         }
 }
 
