@@ -11,6 +11,7 @@ export default function Badges() {
                 title={'Badges'}
                 cardBody={
                     <DFlex
+                        type={'d-flex'}
                         flexContent={
                             <>
                                 <XBadges
@@ -44,6 +45,7 @@ export default function Badges() {
                 title={'Outline'}
                 cardBody={
                     <DFlex
+                        type={'d-flex'}
                         flexContent={
                             <>
                                 <XBadges
