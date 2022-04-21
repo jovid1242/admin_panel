@@ -91,7 +91,7 @@ export default function Avatar() {
                             type={'rounded-primary'}
                             title={
                                 <>
-                                    Use avatar{' '}
+                                    Use avatar
                                     <code>type="rounded-primary".</code>
                                 </>
                             }

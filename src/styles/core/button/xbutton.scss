@@ -1,16 +1,165 @@
 @import '../../variables.scss';
-.primary_btn {
-        display: inline-block;
-        border: none;
+
+.btn {
         text-align: center;
         color: #fff;
+        margin:5px 5px;
+        font-size: 12px;
+        .btn-subtitle {
+                color: #fff;
+                code {
+                        color: $x-crimsom;
+                }
+        }
+}
+
+button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
         padding: 0.6rem 1.25rem;
         font-size: 14px;
         margin-top: 1.5rem;
-        width: 20%;
-        background-color: $x-light-blue;
-        box-shadow: $btn-primary-box-shadow;
-        border: 1px solid $btn-primary-box-shadow;
         border-radius: 0.25rem;
         cursor: pointer;
+        color: #fff;
+}
+
+.primary {
+        background-color: $x-light-blue;
+        box-shadow: $btn-primary-box-shadow;
+}
+.primary_outline {
+        background-color: transparent;
+        border: 1px solid $x-light-blue;
+        color: $x-light-blue;
+        transition: 0.3s ease;
+        &:hover {
+                background-color: $x-light-blue;
+                color: #fff !important;
+                border: none;
+        }
+}
+
+.primary_rounded {
+        border-radius: 1.875rem !important;
+        background-color: $x-light-blue;
+        box-shadow: $btn-primary-box-shadow;
+}
+.outline_rounded {
+        border-radius: 1.875rem !important;
+        background-color: transparent;
+        border: 1px solid $x-light-blue;
+        color: $x-light-blue;
+        transition: 0.3s ease;
+        &:hover {
+                background-color: $x-light-blue;
+                color: #fff !important;
+                border: none;
+        }
+}
+
+//Solid Buttons
+.info {
+        background-color: $cyan;
+        box-shadow: $cyan-box-shadow;
+}
+.success {
+        background-color: $teal;
+        box-shadow: $teal-box-shadow;
+}
+.warning {
+        background-color: $warning;
+        box-shadow: $warning-box-shadow;
+}
+.danger {
+        background-color: $danger;
+        box-shadow: $danger-box-shadow;
+}
+.secondary {
+        background-color: $purple;
+        box-shadow: $purple-box-shadow;
+}
+.dark {
+        background-color: $dark;
+        box-shadow: $dark-box-shadow;
+}
+
+//Outline Buttons type
+.info_outline {
+        background-color: transparent;
+        color: $cyan;
+        border: 1px solid $cyan;
+        box-shadow: $cyan-box-shadow;
+}
+.success_outline {
+        background-color: transparent;
+        color: $teal;
+        border: 1px solid $teal;
+        box-shadow: $teal-box-shadow;
+}
+.warning_outline {
+        background-color: transparent;
+        color: $warning;
+        border: 1px solid $warning;
+        box-shadow: $warning-box-shadow;
+}
+.danger_outline {
+        background-color: transparent;
+        color: $danger;
+        border: 1px solid $danger;
+        box-shadow: $danger-box-shadow;
+}
+.secondary_outline {
+        background-color: transparent;
+        color: $purple;
+        border: 1px solid $purple;
+        box-shadow: $purple-box-shadow;
+}
+.dark_outline {
+        background-color: transparent;
+        color: $dark;
+        border: 1px solid $dark;
+        box-shadow: $dark-box-shadow;
+}
+
+//Buttons with icons 
+
+.icon-left {
+        background-color: $x-light-blue;
+        box-shadow: $x-box-shadow-btn;
+        color: #fff;
+        font-size: 16px;
+        svg {
+                margin-left: 3px;
+        }
+}
+.icon-right {
+        background-color: $yellow;
+        box-shadow: $warning-box-shadow;
+        color: #fff;
+        font-size: 16px;
+        svg {
+                margin-left: 3px;
+        }
+}
+
+.download {
+        background-color: $danger;
+        box-shadow: $danger-box-shadow;
+        color: #fff;
+        svg {
+                margin-left: 3px;
+                font-size: 22px;
+        }
+}
+.mode {
+        background-color: $dark;
+        box-shadow: $dark-box-shadow;
+        color: #fff;
+        svg {
+                margin-left: 3px;
+                font-size: 22px;
+        }
 }

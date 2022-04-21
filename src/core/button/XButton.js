@@ -1,9 +1,11 @@
 import React from 'react'
 import 'styles/core/button/xbutton.scss'
-export default function XButton() {
+export default function XButton({ type, name, icon }) {
     return (
         <div className="btn">
-            <button className="primary_btn">Submit</button>
+            <button className={type}>
+                {name} {icon}
+            </button>
         </div>
     )
 }

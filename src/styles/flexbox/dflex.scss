@@ -4,3 +4,9 @@
     align-items: center;
     width: 100%;
 }
+
+.space-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
