@@ -1,0 +1,70 @@
+@import '../../variables.scss';
+
+.badge {
+    line-height: 1.4;
+    font-size: 12px;
+    padding: 3px 6px;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 0.25rem;
+    margin: 0px 5px;
+}
+
+//MAIN TYPES
+.badge-primary {
+    background-color: $blue;
+}
+
+.badge-info {
+    background-color: $cyan;
+}
+
+.badge-success {
+    background-color: $teal;
+}
+
+.badge-secondary {
+    background-color: $purple;
+}
+.badge-warning {
+    background-color: $warning;
+}
+.badge-danger {
+    background-color: $danger;
+}
+.badge-dark {
+    background-color: $dark;
+}
+
+//OUTLINE TYPES
+.outline-primary {
+    border:1px solid $blue;
+    color: $blue;
+}
+
+.outline-info {
+    border:1px solid $cyan;
+    color: $cyan;
+}
+
+.outline-success {
+    border:1px solid $teal;
+    color: $teal;
+}
+
+.outline-secondary {
+    border:1px solid $purple;
+    color: $purple;
+}
+.outline-warning {
+    border:1px solid $warning;
+    color: $warning;
+}
+.outline-danger {
+    border:1px solid $danger;
+    color: $danger;
+}
+.outline-dark {
+    border:1px solid $dark;
+    color: $dark;
+}

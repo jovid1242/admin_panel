@@ -88,7 +88,7 @@ export default function Menu() {
                     title: 'Avatar',
                 },
                 {
-                    href: '/badges',
+                    href: '/elements/badges',
                     title: 'Badges',
                 },
                 {

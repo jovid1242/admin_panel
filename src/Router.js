@@ -10,6 +10,7 @@ import Table from 'pages/Table'
 import Alerts from 'pages/elements/Alerts'
 import DataTables from 'pages/DataTables'
 import Avatar from 'pages/elements/Avatar'
+import Badges from 'pages/elements/Badges'
 
 export default function Router() {
     return (
@@ -25,6 +26,7 @@ export default function Router() {
                 <Route path="/elements/alerts" element={<Alerts />} />
                 <Route path="/dt-table" element={<DataTables />} />
                 <Route path="/elements/avatar" element={<Avatar />} />
+                <Route path="/elements/badges" element={<Badges />} />
             </Routes>
         </>
     )

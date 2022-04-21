@@ -2,7 +2,7 @@
 
 .custom_bcg {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
     align-items: center;
     background-color: $palette-secondary;
@@ -62,8 +62,6 @@
 .indicator_online::before {
     content: "";
     position: absolute;
-    bottom: 0%;
-    right: 11%;
     width: 15px;
     height: 15px;
     border-radius: 50%;
