@@ -33,16 +33,16 @@ export default function Xtabs({ tabs, type, icon, titleTab }) {
                 title={titleTab}
                 cardBody={
                     <div className={'xtabs ' + type}>
-                        <ul class="nav nav-tabs" role="tablist">
+                        <ul className="nav nav-tabs" role="tablist">
                             {tabs?.map((item, i) => {
                                 return (
                                     <li
-                                        class="nav-item"
-                                        key={item.id && i}
+                                        className="nav-item"
+                                        key={item.title + i}
                                         onClick={() => hadnleActiveTab(item)}
                                     >
                                         <div
-                                            class={
+                                            className={
                                                 activeTab.title === item.title
                                                     ? 'nav-link active'
                                                     : !item.disable

@@ -29,9 +29,9 @@ export default function Router() {
                 <Route path="/chat" element={<Chat />} />
                 <Route path="/buttons" element={<Buttons />} />
                 <Route path="/forms/basic" element={<Basic />} />
-                <Route path="/table" element={<Table />} />
+                <Route path="/tables" element={<Table />} />
                 <Route path="/elements/alerts" element={<Alerts />} />
-                <Route path="/dt-table" element={<DataTables />} />
+                <Route path="/dataTables" element={<DataTables />} />
                 <Route path="/elements/avatar" element={<Avatar />} />
                 <Route path="/elements/badges" element={<Badges />} />
                 <Route
