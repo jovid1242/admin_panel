@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import SubMenu from '../submenu/SubMenu'
-import { Link } from 'react-router-dom'
+import { useLocation, Link } from 'react-router-dom'
 import { BiHomeAlt, BiChevronDown } from 'react-icons/bi'
 import { RiApps2Line, RiTableLine } from 'react-icons/ri'
 import { IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io'
@@ -10,10 +10,13 @@ import { FaElementor, FaWpforms } from 'react-icons/fa'
 import { MdFontDownload, MdOutlineWidgets, MdBackupTable } from 'react-icons/md'
 
 export default function Menu() {
+    const location = useLocation()
     const [activeTab, setActiveTab] = useState({
         visibility: false,
         name: null,
     })
+
+    const [menuList, setMenuList] = useState()
 
     const link = [
         {
@@ -36,6 +39,7 @@ export default function Menu() {
             href: '#',
             title: 'Apps',
             icon: <RiApps2Line />,
+            active: false,
             submenu: [
                 {
                     href: '/chat',
@@ -55,6 +59,7 @@ export default function Menu() {
             href: '#',
             title: 'Components',
             icon: <CgComponents />,
+            active: false,
             submenu: [
                 {
                     href: '/components/tabs',
@@ -78,6 +83,7 @@ export default function Menu() {
             href: '#',
             title: 'Elements',
             icon: <FaElementor />,
+            active: false,
             submenu: [
                 {
                     href: '/elements/alerts',
@@ -157,26 +163,31 @@ export default function Menu() {
             href: '#',
             title: 'Fonts Icons',
             icon: <MdFontDownload />,
+            active: false,
         },
         {
             href: '#',
             title: 'Widgets',
             icon: <MdOutlineWidgets />,
+            active: false,
         },
         {
-            href: '/table',
+            href: '/tables',
             title: 'Tables',
             icon: <RiTableLine />,
+            active: false,
         },
         {
-            href: '/dt-table',
+            href: '/dataTables',
             title: 'DataTables',
             icon: <MdBackupTable />,
+            active: false,
         },
         {
             href: '#',
             title: 'Forms',
             icon: <FaWpforms />,
+            active: false,
             submenu: [
                 {
                     href: '/forms/basic',
@@ -194,14 +205,20 @@ export default function Menu() {
         }
     }
 
+    const userParams = location.pathname.split('/')[1]
+
+    useEffect(() => {
+        setMenuList(link)
+    }, [])
+
     return (
         <>
             <ul className="menu__categories">
-                {link?.map((el, i) => {
+                {menuList?.map((el, i) => {
                     return (
                         <li
                             className={
-                                el.active
+                                el.title.toLowerCase() == userParams
                                     ? 'menu_categories__list activeTabMenu'
                                     : 'menu_categories__list'
                             }
