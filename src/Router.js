@@ -14,6 +14,7 @@ import Badges from 'pages/elements/Badges'
 import ButtonGroups from 'components/elements/ButtonGroups'
 import ColorLibrary from 'pages/elements/ColorLibrary'
 import Infobox from 'pages/elements/Infobox'
+import Loader from 'pages/elements/Loader'
 
 export default function Router() {
     return (
@@ -39,6 +40,7 @@ export default function Router() {
                     element={<ColorLibrary />}
                 />
                 <Route path="/elements/infobox" element={<Infobox />} />
+                <Route path="/elements/loader" element={<Loader />} />
             </Routes>
         </>
     )
