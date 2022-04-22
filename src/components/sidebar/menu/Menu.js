@@ -57,7 +57,7 @@ export default function Menu() {
             icon: <CgComponents />,
             submenu: [
                 {
-                    href: '#',
+                    href: '/components/tabs',
                     title: 'Tabs',
                 },
                 {

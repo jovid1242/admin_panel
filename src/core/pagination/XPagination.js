@@ -1,3 +1,4 @@
+import XCard from 'core/card/XCard'
 import React, { useState } from 'react'
 import Pagination from 'react-js-pagination'
 import 'styles/core/pagination/XPagination.scss'
@@ -13,12 +14,17 @@ export default function XPagination({ perPage, totalItems, handleActivePage }) {
     }
     return (
         <div className="paginate">
-            <Pagination
-                activePage={state.activePage}
-                itemsCountPerPage={Number(perPage)}
-                totalItemsCount={totalItems}
-                pageRangeDisplayed={4}
-                onChange={handlePageChange.bind()}
+            <XCard
+                title={'Default'}
+                cardBody={
+                    <Pagination
+                        activePage={state.activePage}
+                        itemsCountPerPage={Number(perPage)}
+                        totalItemsCount={totalItems}
+                        pageRangeDisplayed={4}
+                        onChange={handlePageChange.bind()}
+                    />
+                }
             />
         </div>
     )
