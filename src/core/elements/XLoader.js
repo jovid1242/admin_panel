@@ -4,7 +4,7 @@ import { RotatingLines, Oval } from 'react-loader-spinner'
 
 export default function XLoader() {
     return (
-        <div>
+        <div className="x-loader">
             <RotatingLines width="70" strokeColor="#fff" />
             <RotatingLines width="50" strokeColor="#fff" />
             <RotatingLines width="30" strokeColor="#fff" />
