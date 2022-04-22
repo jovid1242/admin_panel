@@ -1,4 +1,3 @@
-import DFlex from 'core/flexbox/DFlex'
 import React, { useState } from 'react'
 import 'styles/core/elements/xtag.scss'
 

@@ -107,6 +107,50 @@ export default function Menu() {
                     href: '/elements/color-library',
                     title: 'Color Library',
                 },
+                {
+                    href: '/elements/dropdown',
+                    title: 'Dropdown',
+                },
+                {
+                    href: '/elements/infobox',
+                    title: 'Infobox',
+                },
+                {
+                    href: '/elements/jumbotron',
+                    title: 'Jumbotron',
+                },
+                {
+                    href: '/elements/loader',
+                    title: 'Loader',
+                },
+                {
+                    href: '/elements/pagination',
+                    title: 'Pagination',
+                },
+                {
+                    href: '/elements/popovers',
+                    title: 'Popovers',
+                },
+                {
+                    href: '/elements/progress-bar',
+                    title: 'Progress Bar',
+                },
+                {
+                    href: '/elements/search',
+                    title: 'Search',
+                },
+                {
+                    href: '/elements/tooltips',
+                    title: 'Tooltips',
+                },
+                {
+                    href: '/elements/treeview',
+                    title: 'Treeview',
+                },
+                {
+                    href: '/elements/typography',
+                    title: 'Typography',
+                },
             ],
         },
         {

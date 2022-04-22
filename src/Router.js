@@ -13,6 +13,7 @@ import Avatar from 'pages/elements/Avatar'
 import Badges from 'pages/elements/Badges'
 import ButtonGroups from 'components/elements/ButtonGroups'
 import ColorLibrary from 'pages/elements/ColorLibrary'
+import Infobox from 'pages/elements/Infobox'
 
 export default function Router() {
     return (
@@ -37,6 +38,7 @@ export default function Router() {
                     path="/elements/color-library"
                     element={<ColorLibrary />}
                 />
+                <Route path="/elements/infobox" element={<Infobox />} />
             </Routes>
         </>
     )

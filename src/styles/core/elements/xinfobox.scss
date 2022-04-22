@@ -1,0 +1,155 @@
+@import '../../variables.scss';
+
+
+// ----------------------First Type for INFOBOX-------------------------------
+.infobox-1 {
+    border: 1px solid #191e3a;
+    width: 40%;
+    padding: 25px;
+    border-radius: 6px;
+    box-shadow: 0px 2px 11px 0px rgb(6 8 24 / 39%);
+    margin-right: auto;
+    margin-left: auto;
+
+    .info-icon svg {
+        height: 50px;
+        stroke-width: 1px;
+        margin-bottom: 20px;
+        color: $x-light-blue;
+        vertical-align: middle;
+        font-size: 70px;
+    }
+
+    .info-heading {
+        font-weight: 600;
+        font-size: 19px;
+        margin-bottom: 14px;
+        letter-spacing: 2px;
+        color: $x-light-gray;
+    }
+
+    .info-text {
+        font-size: 15px;
+        color: $x-gray;
+        margin-bottom: 15px;
+    }
+
+    .info-link a {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        color: $x-light-blue;
+    }
+}
+
+// ----------------------Second Type for INFOBOX-------------------------------
+
+.infobox-2 {
+    border: 1px solid #191e3a;
+    width: 40%;
+    padding: 25px;
+    border-radius: 6px;
+    background: #3b3f5c;
+    box-shadow: 0px 2px 11px 0px rgb(6 8 24 / 39%);
+    margin-right: auto;
+    margin-left: auto;
+
+    .info-icon {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+
+        svg {
+            width: 50px;
+            height: 50px;
+            stroke-width: 1px;
+            color: #d3d3d3;
+            vertical-align: middle;
+            background: $x-gray;
+            padding: 15px;
+            border-radius: 50%;
+        }
+    }
+
+    .info-heading {
+        font-weight: 600;
+        font-size: 19px;
+        margin-bottom: 14px;
+        letter-spacing: 2px;
+        color: $x-light-gray;
+        text-align: center !important;
+    }
+
+    .info-text {
+        font-size: 15px;
+        color: $x-gray;
+        margin-bottom: 15px;
+        text-align: center !important;
+    }
+
+    .info-link a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        color: #2196f3;
+        align-items: center;
+    }
+}
+
+// ----------------------Third Type for INFOBOX-------------------------------
+
+.infobox-3 {
+    position: relative;
+    border: 1px solid #191e3a;
+    width: 40%;
+    margin-top: 30px;
+    padding: 50px 25px 25px 25px;
+    border-radius: 6px;
+    background: #3b3f5c;
+    box-shadow: 0px 2px 11px 0px rgb(6 8 24 / 39%);
+    margin-right: auto;
+    margin-left: auto;
+
+    .info-icon {
+        position: absolute;
+        margin-bottom: 20px;
+        background: #4361ee;
+        display: inline-block;
+        top: -60px;
+        padding: 6px;
+        border-radius: 6px;
+
+        svg {
+            width: 50px;
+            height: 50px;
+            stroke-width: 1px;
+            color: #d3d3d3;
+            vertical-align: middle;
+            padding: 15px;
+            border-radius: 50%;
+        }
+    }
+
+    .info-heading {
+        font-weight: 600;
+        font-size: 19px;
+        margin-bottom: 14px;
+        letter-spacing: 2px;
+        color: $x-light-gray;
+    }
+
+    .info-text {
+        font-size: 15px;
+        color: $x-gray;
+        margin-bottom: 15px;
+    }
+
+    .info-link a {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        color: #2196f3;
+        align-items: center;
+    }
+}
