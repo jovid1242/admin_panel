@@ -7,10 +7,8 @@ export default function Loader() {
     return (
         <>
             <XCard
-                title={'Loader Sizes'}
-                cardBody={
-                    <DFlex type={'space-around'} flexContent={<XLoader />} />
-                }
+                title={'Loader Types'}
+                cardBody={<DFlex type={'wrap'} flexContent={<XLoader />} />}
             />
         </>
     )
