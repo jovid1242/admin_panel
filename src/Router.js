@@ -15,6 +15,7 @@ import ButtonGroups from 'components/elements/ButtonGroups'
 import ColorLibrary from 'pages/elements/ColorLibrary'
 import Infobox from 'pages/elements/Infobox'
 import Loader from 'pages/elements/Loader'
+import Tabs from 'pages/components/Tabs'
 
 export default function Router() {
     return (
@@ -41,6 +42,8 @@ export default function Router() {
                 />
                 <Route path="/elements/infobox" element={<Infobox />} />
                 <Route path="/elements/loader" element={<Loader />} />
+                {/* Components  */}
+                <Route path="/components/tabs" element={<Tabs />} />
             </Routes>
         </>
     )
