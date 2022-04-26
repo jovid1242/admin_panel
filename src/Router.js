@@ -19,6 +19,7 @@ import XPagination from 'core/pagination/XPagination'
 import Tabs from 'pages/components/Tabs'
 import ProgressBar from 'pages/elements/ProgressBar'
 import Search from 'pages/elements/Search'
+import Cards from 'pages/components/Cards'
 
 export default function Router() {
     return (
@@ -53,6 +54,7 @@ export default function Router() {
                 <Route path="/elements/search" element={<Search />} />
                 {/* Components  */}
                 <Route path="/components/tabs" element={<Tabs />} />
+                <Route path="/components/cards" element={<Cards />} />
             </Routes>
         </>
     )

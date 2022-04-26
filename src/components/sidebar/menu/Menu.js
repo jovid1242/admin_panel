@@ -70,12 +70,56 @@ export default function Menu() {
                     title: 'Modals',
                 },
                 {
-                    href: '#',
+                    href: '/components/cards',
                     title: 'Cards',
                 },
                 {
                     href: '#',
                     title: 'Carousel',
+                },
+                {
+                    href: '#',
+                    title: 'Block UI',
+                },
+                {
+                    href: '#',
+                    title: 'Countdown',
+                },
+                {
+                    href: '#',
+                    title: 'Counter',
+                },
+                {
+                    href: '#',
+                    title: 'Sweet Alerts',
+                },
+                {
+                    href: '#',
+                    title: 'Timeline',
+                },
+                {
+                    href: '#',
+                    title: 'Notifications',
+                },
+                {
+                    href: '#',
+                    title: 'Session Timeout',
+                },
+                {
+                    href: '#',
+                    title: 'Media Object',
+                },
+                {
+                    href: '#',
+                    title: 'List Group',
+                },
+                {
+                    href: '#',
+                    title: 'Pricing Tables',
+                },
+                {
+                    href: '#',
+                    title: 'Lightbox',
                 },
             ],
         },

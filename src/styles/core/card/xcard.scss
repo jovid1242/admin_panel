@@ -1,13 +1,13 @@
 @import '../../variables.scss';
 
-.card {
+.block {
     padding: 20px;
     border-radius: 6px;
     background: $palette-primary;
     width: 60%;
     height: auto;
     margin-bottom: 25px;
-    .card-header {
+    .block-header {
         display: flex;
         justify-content: space-between;
         margin-bottom: 20px;
@@ -15,7 +15,7 @@
         font-weight: 600;
         color: $palette-headlines;
     }
-    .card-body {
+    .block-body {
         position: relative;
     }
 }
