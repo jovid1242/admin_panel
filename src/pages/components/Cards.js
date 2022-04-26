@@ -17,6 +17,19 @@ export default function Cards() {
                     />
                 }
             />
+            <XCard
+                title={'Card type #1'}
+                cardBody={
+                    <XCards
+                        icon={false}
+                        image={true}
+                        title={'Simple'}
+                        bodyText={
+                            'Mauris nisi felis, placerat in volutpat id, varius et sapien.'
+                        }
+                    />
+                }
+            />
         </>
     )
 }
