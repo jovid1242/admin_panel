@@ -1,0 +1,40 @@
+@import 'styles/variables.scss';
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    gap: 1;
+    .tag {
+        padding: 5px 10px;
+        background-color: $x-light-blue;
+        color: #fff;
+        border-radius: 4px;
+        margin: 5px 10px;
+        span {
+            font-weight: 800;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+    }
+}
+
+.tags-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    input {
+        outline: none;
+        width: 150px;
+        font-weight: 400;
+        line-height: 1.5;
+        border: 1px solid $x-royal-blue;
+        font-size: 15px;
+        letter-spacing: 1px;
+        border-radius: 6px;
+        padding: 0.75rem 1.25rem;
+        background: $x-royal-blue;
+        color: #25d5e4;
+    }
+}
