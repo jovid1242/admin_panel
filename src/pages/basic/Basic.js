@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import XInput from 'core/forms/XInput'
 import XCard from 'core/card/XCard'
 import XUpload from 'core/forms/XUpload'

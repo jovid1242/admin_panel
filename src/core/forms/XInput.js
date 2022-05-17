@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import 'styles/core/basic/xinput.scss'
 
 export default function XInput(props) {

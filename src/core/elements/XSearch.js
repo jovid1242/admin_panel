@@ -9,7 +9,7 @@ export default function XSearch({ type }) {
                 <div className="search">
                     <input placeholder="Search Attendies..."></input>
                     <span className="search-icon">
-                        <a href="">
+                        <a href="#">
                             <FiSearch />
                         </a>
                     </span>

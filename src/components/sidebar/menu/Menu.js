@@ -3,14 +3,12 @@ import SubMenu from '../submenu/SubMenu'
 import { useLocation, Link } from 'react-router-dom'
 import { BiHomeAlt, BiChevronDown } from 'react-icons/bi'
 import { RiApps2Line, RiTableLine } from 'react-icons/ri'
-import { IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io'
+import { IoMdArrowDropup } from 'react-icons/io'
 import { CgComponents } from 'react-icons/cg'
-import { SiInstructables, SiNuxtdotjs } from 'react-icons/si'
 import { FaElementor, FaWpforms } from 'react-icons/fa'
 import { MdFontDownload, MdOutlineWidgets, MdBackupTable } from 'react-icons/md'
 
 export default function Menu() {
-    const location = useLocation()
     const [activeTab, setActiveTab] = useState({
         visibility: false,
         name: null,
@@ -142,11 +140,7 @@ export default function Menu() {
                     title: 'Badges',
                 },
                 {
-                    href: '/breadcrumbs',
-                    title: 'Breadcrumbs',
-                },
-                {
-                    href: '/buttons',
+                    href: '/elements/buttons',
                     title: 'Buttons',
                 },
                 {
@@ -164,10 +158,6 @@ export default function Menu() {
                 {
                     href: '/elements/infobox',
                     title: 'Infobox',
-                },
-                {
-                    href: '/elements/jumbotron',
-                    title: 'Jumbotron',
                 },
                 {
                     href: '/elements/loader',
@@ -188,18 +178,6 @@ export default function Menu() {
                 {
                     href: '/elements/search',
                     title: 'Search',
-                },
-                {
-                    href: '/elements/tooltips',
-                    title: 'Tooltips',
-                },
-                {
-                    href: '/elements/treeview',
-                    title: 'Treeview',
-                },
-                {
-                    href: '/elements/typography',
-                    title: 'Typography',
                 },
             ],
         },
@@ -249,7 +227,9 @@ export default function Menu() {
         }
     }
 
+    const location = useLocation()
     const userParams = location.pathname.split('/')[1]
+    const subMenuActive = location.pathname.split('/')[2]
 
     useEffect(() => {
         setMenuList(link)
@@ -301,6 +281,7 @@ export default function Menu() {
                                     <SubMenu
                                         visibility={activeTab.visibility}
                                         link={el.submenu}
+                                        active={subMenuActive}
                                     />
                                 ) : null
                             ) : null}

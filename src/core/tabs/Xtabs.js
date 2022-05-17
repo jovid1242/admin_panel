@@ -19,6 +19,7 @@ export default function Xtabs({ tabs, type, icon, titleTab }) {
         }
         return
     }
+
     useEffect(() => {
         setActiveTab({
             title: tabs[0].title,

@@ -29,7 +29,7 @@ export default function Router() {
                 <Route path="/dashboard" element={<Sales />} />
                 <Route path="/analytics" element={<Analytics />} />
                 <Route path="/chat" element={<Chat />} />
-                <Route path="/buttons" element={<Buttons />} />
+                <Route path="/elements/buttons" element={<Buttons />} />
                 <Route path="/forms/basic" element={<Basic />} />
                 <Route path="/tables" element={<Table />} />
                 <Route path="/elements/alerts" element={<Alerts />} />

@@ -11,8 +11,12 @@
         li {
             padding: 5px;
             margin-bottom: 3px;
+            .activeLink {
+                color: #61b6cd;
+            }
 
             a {
+                transition: 0.3s ease-in-out;
                 color: #888ea8;
 
                 &:hover {
